@@ -128,7 +128,7 @@ public class Main {
 		writeFile(fmt, index, M);
 
 		// Small file per term
-		File subdir = new File(dir, "ext");
+		File subdir = new File(dir, ext);
 		subdir.mkdir();
 
 		for (Resource subj : M.subjects()) {

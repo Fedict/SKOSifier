@@ -100,9 +100,12 @@ public class Main {
 	/**
 	 * Write SKOS files to a directory.
 	 * 
-	 * @param dir top level directory 
+	 * @param dir top level directory
+	 * @param fmt format
+	 * @param ext file extension
 	 */
-	private static void writeSkos(File dir) throws IOException {
+	private static void writeSkos(File dir, RDFFormat fmt, String ext) 
+			throws IOException {
 		Model M = new LinkedHashModel();
 		ValueFactory F = SimpleValueFactory.getInstance();
 	
@@ -121,20 +124,31 @@ public class Main {
 		}
 		
 		// Main index files
-		File index = new File(dir, "index.ttl");
-		writeFile(RDFFormat.TURTLE, index, M);
+		File index = new File(dir, "index." + ext);
+		writeFile(fmt, index, M);
 
 		// Small file per term
-		File subdir = new File(dir, "ttl");
+		File subdir = new File(dir, "ext");
 		subdir.mkdir();
-		
+
 		for (Resource subj : M.subjects()) {
 			int pos = subj.stringValue().lastIndexOf("/");
 			String name = subj.stringValue().substring(pos);
 			
-			File f = new File(subdir, name + ".ttl");
-			writeFile(RDFFormat.TURTLE, f, M.filter(subj, null, null));
+			File f = new File(subdir, name + "." + ext);
+			writeFile(fmt, f, M.filter(subj, null, null));
 		}
+	}
+	
+	/**
+	 * Write SKOS files, in different formats, to a directory.
+	 * 
+	 * @param dir top level directory 
+	 * @throws java.io.IOException 
+	 */
+	public static void writeSkos(File dir) throws IOException {
+		writeSkos(dir, RDFFormat.TURTLE, "ttl");
+		writeSkos(dir, RDFFormat.RDFXML, "xml");		
 	}
 	
 	/**

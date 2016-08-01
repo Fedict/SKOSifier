@@ -162,6 +162,9 @@ public class Main {
 		FileWriter w = new FileWriter(f);
 		
 		w.append("<html>\n")
+			.append("<head>\n")
+			.append("<title></title>\n")
+			.append("<link rel='stylesheet' href='style.css' type='text/css' ></style>")
 			.append("<body>\n");
 		
 		w.append("<table>\n")

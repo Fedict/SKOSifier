@@ -248,6 +248,7 @@ public class Main {
 			writeSkos(dir);
 			writeHTML(dir);
 		} catch (IOException ex) {
+			ex.printStackTrace();
 			System.err.println("Failed to write output");
 			System.exit(-3);
 		}

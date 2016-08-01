@@ -37,6 +37,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 
 import java.util.List;
+import javax.swing.text.html.HTML;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
@@ -177,8 +178,15 @@ public class Main {
 		
 		for (String[] row: rows) {
 			w.append("<tr>");
-			for (String cell: row) {
-				w.append("<td>").append(cell).append("</td>");
+			for (int i=0; i < row.length; i++) {
+				w.append("<td>");
+				if (i < 2) {
+					w.append("<a href='" + row[i] + ".html'>")
+						.append(row[i]).append("</a>");
+				} else {
+					w.append(row[i]);
+				}
+				w.append("</td>");
 			}
 			w.append("</tr>\n");
 		}

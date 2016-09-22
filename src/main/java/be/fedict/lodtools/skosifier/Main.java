@@ -26,23 +26,22 @@
 
 package be.fedict.lodtools.skosifier;
 
+import com.google.common.base.Charsets;
 import com.opencsv.CSVReader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.util.ArrayList;
-
 import java.util.List;
-import javax.swing.text.html.HTML;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
@@ -89,13 +88,13 @@ public class Main {
 	 * @param f file to write to
 	 */
 	private static void writeFile(RDFFormat fmt, File f, Model m) throws IOException {
-		Writer w = new FileWriter(f);
+		Writer out = new OutputStreamWriter(new FileOutputStream(f), Charsets.UTF_8);
 		
-		RDFWriter out = Rio.createWriter(fmt, w);
-		out.handleNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
-		out.startRDF();
-		m.forEach(out::handleStatement);
-		out.endRDF();
+		RDFWriter w = Rio.createWriter(fmt, out);
+		w.handleNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
+		w.startRDF();
+		m.forEach(w::handleStatement);
+		w.endRDF();
 	}
 
 	/**
@@ -111,34 +110,24 @@ public class Main {
 		ValueFactory F = SimpleValueFactory.getInstance();
 	
 		for(String[] row: rows) {
-			IRI child = F.createIRI(baseURI, row[0]);
+			IRI child = F.createIRI(baseURI, row[0] + "#id");
 			M.add(child, RDF.TYPE, SKOS.CONCEPT);
 			if (!row[1].isEmpty()) {
-				IRI parent = F.createIRI(baseURI, row[1]);
+				IRI parent = F.createIRI(baseURI, row[1] + "#id");
 				M.add(child, SKOS.BROADER, parent);
 				M.add(parent, SKOS.NARROWER, child);
 			}
 			for (int i = 2; i < header.length; i++) {
-				Literal label = F.createLiteral(row[i], header[i]);
-				M.add(child, SKOS.PREF_LABEL, label);
+				if (! header[i].isEmpty()) {
+					Literal label = F.createLiteral(row[i], header[i]);
+					M.add(child, SKOS.PREF_LABEL, label);
+				}
 			}
 		}
 		
 		// Main index files
 		File index = new File(dir, "index." + ext);
 		writeFile(fmt, index, M);
-
-		// Small file per term
-		File subdir = new File(dir, ext);
-		subdir.mkdir();
-
-		for (Resource subj : M.subjects()) {
-			int pos = subj.stringValue().lastIndexOf("/");
-			String name = subj.stringValue().substring(pos);
-			
-			File f = new File(subdir, name + "." + ext);
-			writeFile(fmt, f, M.filter(subj, null, null));
-		}
 	}
 	
 	/**
@@ -148,8 +137,8 @@ public class Main {
 	 * @throws java.io.IOException 
 	 */
 	public static void writeSkos(File dir) throws IOException {
+		writeSkos(dir, RDFFormat.NTRIPLES, "nt");
 		writeSkos(dir, RDFFormat.TURTLE, "ttl");
-		writeSkos(dir, RDFFormat.RDFXML, "xml");		
 	}
 	
 	/**
@@ -181,7 +170,7 @@ public class Main {
 			for (int i=0; i < row.length; i++) {
 				w.append("<td>");
 				if (i < 2) {
-					w.append("<a href='" + row[i] + ".html'>")
+					w.append("<a href='" + row[i] + ".html#id'>")
 						.append(row[i]).append("</a>");
 				} else {
 					w.append(row[i]);
@@ -205,17 +194,6 @@ public class Main {
 		// Main index files
 		File index = new File(dir, "index.html");
 		writeHTMLTable(index, rows);
-
-		// Small file per term
-		File subdir = new File(dir, "html");
-		subdir.mkdir();
-		
-		for (String[] row: rows) {
-			File f = new File(subdir, row[0] + ".html");
-			List<String[]> r = new ArrayList<>();
-			r.add(row);
-			writeHTMLTable(f, r);
-		}
 	}
 	
 	/**
@@ -248,7 +226,6 @@ public class Main {
 			writeSkos(dir);
 			writeHTML(dir);
 		} catch (IOException ex) {
-			ex.printStackTrace();
 			System.err.println("Failed to write output");
 			System.exit(-3);
 		}

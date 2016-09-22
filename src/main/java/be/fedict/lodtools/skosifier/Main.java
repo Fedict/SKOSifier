@@ -118,7 +118,7 @@ public class Main {
 				M.add(parent, SKOS.NARROWER, child);
 			}
 			for (int i = 2; i < header.length; i++) {
-				if (! header[i].isEmpty()) {
+				if (! row[i].isEmpty()) {
 					Literal label = F.createLiteral(row[i], header[i]);
 					M.add(child, SKOS.PREF_LABEL, label);
 				}

@@ -46,10 +46,12 @@ import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
+import org.eclipse.rdf4j.rio.helpers.BasicWriterSettings;
 
 /**
  * Converts a CSV to a SKOS file and various RDF files
@@ -91,6 +93,7 @@ public class Main {
 		Writer out = new OutputStreamWriter(new FileOutputStream(f), Charsets.UTF_8);
 		
 		RDFWriter w = Rio.createWriter(fmt, out);
+		w.set(BasicWriterSettings.PRETTY_PRINT, true);
 		w.handleNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
 		w.startRDF();
 		m.forEach(w::handleStatement);
@@ -119,11 +122,15 @@ public class Main {
 		Model M = new LinkedHashModel();
 		ValueFactory F = SimpleValueFactory.getInstance();
 	
-		IRI scheme = F.createIRI(id(baseURI));
+		String vocab = baseURI.endsWith("/") 
+				? baseURI.substring(0, baseURI.length()-1)
+				: baseURI;	
+		IRI scheme = F.createIRI(id(vocab));
+		M.add(scheme, RDF.TYPE, SKOS.CONCEPT_SCHEME);
+		
 		for(String[] row: rows) {
 			IRI node = F.createIRI(baseURI, id(row[0]));
-			M.add(node, RDF.TYPE, SKOS.CONCEPT);
-			M.add(node, SKOS.NOTATION, F.createLiteral(row[0]));
+
 			// parent or not
 			if (row[1].isEmpty()) {
 				M.add(node, SKOS.TOP_CONCEPT_OF, scheme);
@@ -133,6 +140,10 @@ public class Main {
 				M.add(node, SKOS.BROADER, parent);
 				M.add(parent, SKOS.NARROWER, node);
 			}
+			
+			M.add(node, RDF.TYPE, SKOS.CONCEPT);
+			M.add(node, SKOS.NOTATION, F.createLiteral(row[0]));
+			
 			for (int i = 2; i < header.length; i++) {
 				if (! row[i].isEmpty()) {
 					Literal label = F.createLiteral(row[i], header[i]);

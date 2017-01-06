@@ -98,6 +98,16 @@ public class Main {
 	}
 
 	/**
+	 * Create and ID from a string
+	 * 
+	 * @param s string
+	 * @return identifier
+	 */
+	private static String id(String s) {
+		return s + "#id";
+	}
+	
+	/**
 	 * Write SKOS files to a directory.
 	 * 
 	 * @param dir top level directory
@@ -109,18 +119,24 @@ public class Main {
 		Model M = new LinkedHashModel();
 		ValueFactory F = SimpleValueFactory.getInstance();
 	
+		IRI scheme = F.createIRI(id(baseURI));
 		for(String[] row: rows) {
-			IRI child = F.createIRI(baseURI, row[0] + "#id");
-			M.add(child, RDF.TYPE, SKOS.CONCEPT);
-			if (!row[1].isEmpty()) {
-				IRI parent = F.createIRI(baseURI, row[1] + "#id");
-				M.add(child, SKOS.BROADER, parent);
-				M.add(parent, SKOS.NARROWER, child);
+			IRI node = F.createIRI(baseURI, id(row[0]));
+			M.add(node, RDF.TYPE, SKOS.CONCEPT);
+			M.add(node, SKOS.NOTATION, F.createLiteral(row[0]));
+			// parent or not
+			if (row[1].isEmpty()) {
+				M.add(node, SKOS.TOP_CONCEPT_OF, scheme);
+				M.add(scheme, SKOS.HAS_TOP_CONCEPT, node);
+			} else { 
+				IRI parent = F.createIRI(baseURI, id(row[1]));
+				M.add(node, SKOS.BROADER, parent);
+				M.add(parent, SKOS.NARROWER, node);
 			}
 			for (int i = 2; i < header.length; i++) {
 				if (! row[i].isEmpty()) {
 					Literal label = F.createLiteral(row[i], header[i]);
-					M.add(child, SKOS.PREF_LABEL, label);
+					M.add(node, SKOS.PREF_LABEL, label);
 				}
 			}
 		}
@@ -224,7 +240,7 @@ public class Main {
 		
 		try {
 			writeSkos(dir);
-			writeHTML(dir);
+		//	writeHTML(dir);
 		} catch (IOException ex) {
 			System.err.println("Failed to write output");
 			System.exit(-3);

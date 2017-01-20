@@ -37,9 +37,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Date;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
@@ -68,11 +71,6 @@ public class Main {
 		
 	private static String baseURI;
 	
-	private static final String CC0 = "http://creativecommons.org/publicdomain/zero/1.0/";
-	private static final String FMT_NT = "http://www.w3.org/ns/formats/N-Triples";
-	private static final String FMT_TTL = "http://www.w3.org/ns/formats/Turtle";
-	private static final String FMT_LD = "http://www.w3.org/ns/formats/JSON-LD";
-	
 	private static final String START = "https://schema.org/startDate";
 	private static final String END = "https://schema.org/endDate";
 	
@@ -85,7 +83,9 @@ public class Main {
 	 * The first line must contain the following column headers:
 	 * - "ID": unique ID
 	 * - "parent": parent ID (optional)
-	 * - language tag (e.g. "nl", "fr".... one language per column)
+	 * - language tag (e.g. "nl", "fr", "de", "en" .... one language per column)
+	 * - start date
+	 * - end date
 	 * 
 	 * @param f CSV file
 	 * @throws FileNotFoundException
@@ -136,20 +136,14 @@ public class Main {
 			throws IOException {
 		Model M = new LinkedHashModel();
 		ValueFactory F = SimpleValueFactory.getInstance();
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	
 		String vocab = baseURI.endsWith("/") 
 				? baseURI.substring(0, baseURI.length()-1)
 				: baseURI;	
 		IRI scheme = F.createIRI(id(vocab));
 		M.add(scheme, RDF.TYPE, SKOS.CONCEPT_SCHEME);
-		M.add(scheme, DCTERMS.LICENSE, F.createIRI(CC0));
-		M.add(scheme, VOID.FEATURE, F.createIRI(FMT_LD));
-		M.add(scheme, VOID.FEATURE, F.createIRI(FMT_NT));
-		M.add(scheme, VOID.FEATURE, F.createIRI(FMT_TTL));
-		M.add(scheme, VOID.DATA_DUMP, F.createIRI(baseURI));
-		M.add(scheme, VOID.ROOT_RESOURCE, F.createIRI(baseURI));
-		M.add(scheme, VOID.URI_SPACE, F.createLiteral(baseURI));
-		M.add(scheme, VOID.VOCABULARY, F.createIRI(SKOS.NAMESPACE));
+
 		
 		for(String[] row: rows) {
 			IRI node = F.createIRI(baseURI, id(row[0]));
@@ -173,17 +167,24 @@ public class Main {
 					if (langs.contains(header[i])) {
 						Literal label = F.createLiteral(row[i], header[i]);
 						M.add(node, SKOS.PREF_LABEL, label);
-						M.add(node, RDFS.LABEL, label);
 					}
 					if (header[i].equals("start")) {
-						Date start = Date.valueOf(row[i]);
-						Literal date = F.createLiteral(start);
-						M.add(node, F.createIRI(START), date);
+						try {
+							Date start = df.parse(row[i]);
+							Literal date = F.createLiteral(start);
+							M.add(node, F.createIRI(START), date);
+						} catch (ParseException pe) {
+							//
+						}
 					}
 					if (header[i].equals("end")) {
-						Date end = Date.valueOf(row[i]);
-						Literal date = F.createLiteral(end);
-						M.add(node,  F.createIRI(END), date);
+						try {
+							Date end = df.parse(row[i]);
+							Literal date = F.createLiteral(end);
+							M.add(node,  F.createIRI(END), date);
+						} catch (ParseException pe) {
+							//
+						}
 					}
 					if (header[i].startsWith("same")) {
 						IRI same = F.createIRI(row[i]);

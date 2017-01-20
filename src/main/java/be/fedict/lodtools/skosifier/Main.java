@@ -37,6 +37,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.sql.Date;
+import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.rdf4j.model.IRI;
@@ -45,9 +47,11 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
@@ -63,7 +67,18 @@ public class Main {
 	private static String[] header;
 		
 	private static String baseURI;
-			
+	
+	private static final String CC0 = "http://creativecommons.org/publicdomain/zero/1.0/";
+	private static final String FMT_NT = "http://www.w3.org/ns/formats/N-Triples";
+	private static final String FMT_TTL = "http://www.w3.org/ns/formats/Turtle";
+	private static final String FMT_LD = "http://www.w3.org/ns/formats/JSON-LD";
+	
+	private static final String START = "https://schema.org/startDate";
+	private static final String END = "https://schema.org/endDate";
+	
+	private static final List langs = Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
+
+	
 	/**
 	 * Read CSV input file (using ; as separator).
 	 * 
@@ -127,6 +142,14 @@ public class Main {
 				: baseURI;	
 		IRI scheme = F.createIRI(id(vocab));
 		M.add(scheme, RDF.TYPE, SKOS.CONCEPT_SCHEME);
+		M.add(scheme, DCTERMS.LICENSE, F.createIRI(CC0));
+		M.add(scheme, VOID.FEATURE, F.createIRI(FMT_LD));
+		M.add(scheme, VOID.FEATURE, F.createIRI(FMT_NT));
+		M.add(scheme, VOID.FEATURE, F.createIRI(FMT_TTL));
+		M.add(scheme, VOID.DATA_DUMP, F.createIRI(baseURI));
+		M.add(scheme, VOID.ROOT_RESOURCE, F.createIRI(baseURI));
+		M.add(scheme, VOID.URI_SPACE, F.createLiteral(baseURI));
+		M.add(scheme, VOID.VOCABULARY, F.createIRI(SKOS.NAMESPACE));
 		
 		for(String[] row: rows) {
 			IRI node = F.createIRI(baseURI, id(row[0]));
@@ -142,12 +165,30 @@ public class Main {
 			}
 			
 			M.add(node, RDF.TYPE, SKOS.CONCEPT);
+			M.add(node, SKOS.IN_SCHEME, scheme);
 			M.add(node, SKOS.NOTATION, F.createLiteral(row[0]));
 			
 			for (int i = 2; i < header.length; i++) {
 				if (! row[i].isEmpty()) {
-					Literal label = F.createLiteral(row[i], header[i]);
-					M.add(node, SKOS.PREF_LABEL, label);
+					if (langs.contains(header[i])) {
+						Literal label = F.createLiteral(row[i], header[i]);
+						M.add(node, SKOS.PREF_LABEL, label);
+						M.add(node, RDFS.LABEL, label);
+					}
+					if (header[i].equals("start")) {
+						Date start = Date.valueOf(row[i]);
+						Literal date = F.createLiteral(start);
+						M.add(node, F.createIRI(START), date);
+					}
+					if (header[i].equals("end")) {
+						Date end = Date.valueOf(row[i]);
+						Literal date = F.createLiteral(end);
+						M.add(node,  F.createIRI(END), date);
+					}
+					if (header[i].startsWith("same")) {
+						IRI same = F.createIRI(row[i]);
+						M.add(node, SKOS.EXACT_MATCH, same);	
+					}
 				}
 			}
 		}

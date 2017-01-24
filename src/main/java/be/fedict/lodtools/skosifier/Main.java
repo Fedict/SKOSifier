@@ -282,7 +282,7 @@ public class Main {
 		try {
 			readCSV(f);
 		} catch (IOException ex) {
-			System.err.println("Failed to read input file");
+			System.err.println("Failed to read input file " + ex.getMessage());
 			System.exit(-2);
 		}
 		

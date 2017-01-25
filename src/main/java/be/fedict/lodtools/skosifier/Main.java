@@ -30,19 +30,25 @@ import com.google.common.base.Charsets;
 import com.opencsv.CSVReader;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.Reader;
 import java.io.Writer;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.commons.lang3.CharEncoding;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
@@ -50,11 +56,10 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
-import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
-import org.eclipse.rdf4j.model.vocabulary.VOID;
+
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
@@ -71,11 +76,21 @@ public class Main {
 		
 	private static String baseURI;
 	
+	private static final ValueFactory F = SimpleValueFactory.getInstance();
+	private static final DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+
 	private static final String START = "https://schema.org/startDate";
 	private static final String END = "https://schema.org/endDate";
 	
-	private static final List langs = Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
-
+	private static final List LANGS = Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
+	private static final Map<String, IRI> PROPS = new HashMap();
+	static {
+		PROPS.put(OWL.SAMEAS.getLocalName().toLowerCase(), OWL.SAMEAS);
+		PROPS.put(SKOS.EXACT_MATCH.getLocalName().toLowerCase(), SKOS.EXACT_MATCH);
+		PROPS.put(SKOS.EXACT_MATCH.getLocalName().toLowerCase(), SKOS.CLOSE_MATCH);
+		PROPS.put(SKOS.BROAD_MATCH.getLocalName().toLowerCase(), SKOS.BROAD_MATCH);
+		PROPS.put(SKOS.NARROW_MATCH.getLocalName().toLowerCase(), SKOS.NARROW_MATCH);
+	}
 	
 	/**
 	 * Read CSV input file (using ; as separator).
@@ -92,10 +107,11 @@ public class Main {
 	 * @throws IOException 
 	 */
 	private static void readCSV(File f) throws FileNotFoundException, IOException {
-		CSVReader r = new CSVReader(new FileReader(f), ';');
-		rows = r.readAll();
-		header = rows.remove(0);	
-		r.close();
+		Reader reader = new InputStreamReader(new FileInputStream(f), CharEncoding.UTF_8);
+		try (CSVReader r = new CSVReader(reader, ';')) {
+			rows = r.readAll();
+			header = rows.remove(0);
+		}
 	}
 
 	/**
@@ -135,19 +151,17 @@ public class Main {
 	private static void writeSkos(File dir, RDFFormat fmt, String ext) 
 			throws IOException {
 		Model M = new LinkedHashModel();
-		ValueFactory F = SimpleValueFactory.getInstance();
-		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-	
+
 		String vocab = baseURI.endsWith("/") 
 				? baseURI.substring(0, baseURI.length()-1)
 				: baseURI;	
+		
 		IRI scheme = F.createIRI(id(vocab));
 		M.add(scheme, RDF.TYPE, SKOS.CONCEPT_SCHEME);
-
 		
 		for(String[] row: rows) {
 			IRI node = F.createIRI(baseURI, id(row[0]));
-
+		
 			// parent or not
 			if (row[1].isEmpty()) {
 				M.add(node, SKOS.TOP_CONCEPT_OF, scheme);
@@ -163,39 +177,46 @@ public class Main {
 			M.add(node, SKOS.NOTATION, F.createLiteral(row[0]));
 			
 			for (int i = 2; i < header.length; i++) {
-				if (! row[i].isEmpty()) {
-					if (langs.contains(header[i])) {
-						Literal label = F.createLiteral(row[i], header[i]);
-						M.add(node, SKOS.PREF_LABEL, label);
+				if (row[i].isEmpty()) {
+					continue;
+				}
+				// labels in different languages
+				if (LANGS.contains(header[i])) {
+					Literal label = F.createLiteral(row[i], header[i]);
+					M.add(node, SKOS.PREF_LABEL, label);
+				}
+				
+				// optional start / end date
+				if (header[i].equals("start")) {
+					try {
+						Date start = df.parse(row[i]);
+						Literal date = F.createLiteral(start);
+						M.add(node, F.createIRI(START), date);
+					} catch (ParseException pe) {
+						//
 					}
-					if (header[i].equals("start")) {
-						try {
-							Date start = df.parse(row[i]);
-							Literal date = F.createLiteral(start);
-							M.add(node, F.createIRI(START), date);
-						} catch (ParseException pe) {
-							//
-						}
+				}
+				if (header[i].equals("end")) {
+					try {
+						Date end = df.parse(row[i]);
+						Literal date = F.createLiteral(end);
+						M.add(node,  F.createIRI(END), date);
+					} catch (ParseException pe) {
+					//
 					}
-					if (header[i].equals("end")) {
-						try {
-							Date end = df.parse(row[i]);
-							Literal date = F.createLiteral(end);
-							M.add(node,  F.createIRI(END), date);
-						} catch (ParseException pe) {
-							//
-						}
-					}
-					if (header[i].startsWith("same")) {
-						IRI same = F.createIRI(row[i]);
-						M.add(node, SKOS.EXACT_MATCH, same);	
+				}
+				
+				// Check skos exact/narrow match etc
+				for (String prop: PROPS.keySet()) {
+					if (header[i].startsWith(prop)) {
+						IRI ref = F.createIRI(row[i]);
+						M.add(node, PROPS.get(prop), ref);	
 					}
 				}
 			}
 		}
 		
-		// Main index files
-		File index = new File(dir, "index." + ext);
+		File index = new File(dir, "skos." + ext);
 		writeFile(fmt, index, M);
 	}
 	
@@ -208,61 +229,7 @@ public class Main {
 	public static void writeSkos(File dir) throws IOException {
 		writeSkos(dir, RDFFormat.NTRIPLES, "nt");
 		writeSkos(dir, RDFFormat.TURTLE, "ttl");
-	}
-	
-	/**
-	 * Write to HTML
-	 * 
-	 * @param f
-	 * @param nr
-	 * @throws IOException 
-	 */
-	private static void writeHTMLTable(File f, List<String[]> rows) throws IOException {
-		FileWriter w = new FileWriter(f);
-		
-		w.append("<html>\n")
-			.append("<head>\n")
-			.append("<title></title>\n")
-			.append("<link rel='stylesheet' href='style.css' type='text/css' ></style>")
-			.append("<body>\n");
-		
-		w.append("<table>\n")
-			.append("<tr>");
-		
-		for (String h: header) {
-			w.append("<th>").append(h).append("</th>");
-		}
-		w.append("</tr>\n");
-		
-		for (String[] row: rows) {
-			w.append("<tr>");
-			for (int i=0; i < row.length; i++) {
-				w.append("<td>");
-				if (i < 2) {
-					w.append("<a href='" + row[i] + ".html#id'>")
-						.append(row[i]).append("</a>");
-				} else {
-					w.append(row[i]);
-				}
-				w.append("</td>");
-			}
-			w.append("</tr>\n");
-		}
-	
-		w.append("</table>");
-		w.append("</body>");
-		w.close();
-	}
-	
-	/**
-	 * Write HTML files to a directory.
-	 * 
-	 * @param dir top level directory 
-	 */
-	private static void writeHTML(File dir) throws IOException {
-		// Main index files
-		File index = new File(dir, "index.html");
-		writeHTMLTable(index, rows);
+		writeSkos(dir, RDFFormat.JSONLD, "json");
 	}
 	
 	/**

@@ -87,7 +87,7 @@ public class Main {
 	static {
 		PROPS.put(OWL.SAMEAS.getLocalName().toLowerCase(), OWL.SAMEAS);
 		PROPS.put(SKOS.EXACT_MATCH.getLocalName().toLowerCase(), SKOS.EXACT_MATCH);
-		PROPS.put(SKOS.EXACT_MATCH.getLocalName().toLowerCase(), SKOS.CLOSE_MATCH);
+		PROPS.put(SKOS.CLOSE_MATCH.getLocalName().toLowerCase(), SKOS.CLOSE_MATCH);
 		PROPS.put(SKOS.BROAD_MATCH.getLocalName().toLowerCase(), SKOS.BROAD_MATCH);
 		PROPS.put(SKOS.NARROW_MATCH.getLocalName().toLowerCase(), SKOS.NARROW_MATCH);
 	}
@@ -229,7 +229,7 @@ public class Main {
 	public static void writeSkos(File dir) throws IOException {
 		writeSkos(dir, RDFFormat.NTRIPLES, "nt");
 		writeSkos(dir, RDFFormat.TURTLE, "ttl");
-		writeSkos(dir, RDFFormat.JSONLD, "json");
+		//writeSkos(dir, RDFFormat.JSONLD, "json");
 	}
 	
 	/**

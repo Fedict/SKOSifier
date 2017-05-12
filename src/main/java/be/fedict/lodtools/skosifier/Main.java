@@ -82,7 +82,11 @@ public class Main {
 	private static final String START = "https://schema.org/startDate";
 	private static final String END = "https://schema.org/endDate";
 	
-	private static final List LANGS = Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
+	private static final List LANGS = 
+			Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
+	private static final List ALT_LANGS = 
+			Arrays.asList(new String[]{ "alt_nl", "alt_fr", "alt_de", "alt_en" });
+	
 	private static final Map<String, IRI> PROPS = new HashMap();
 	static {
 		PROPS.put(OWL.SAMEAS.getLocalName().toLowerCase(), OWL.SAMEAS);
@@ -180,12 +184,16 @@ public class Main {
 				if (row[i].isEmpty()) {
 					continue;
 				}
-				// labels in different languages
+				// pref labels in different languages
 				if (LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i]);
 					M.add(node, SKOS.PREF_LABEL, label);
 				}
-				
+				// alt labels in different languages
+				if (ALT_LANGS.contains(header[i])) {
+					Literal label = F.createLiteral(row[i], header[i].replace("alt_", ""));
+					M.add(node, SKOS.ALT_LABEL, label);
+				}				
 				// optional start / end date
 				if (header[i].equals("start")) {
 					try {

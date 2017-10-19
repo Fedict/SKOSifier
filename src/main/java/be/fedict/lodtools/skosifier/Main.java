@@ -38,6 +38,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
+import java.math.BigDecimal;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -188,11 +189,13 @@ public class Main {
 				if (LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i]);
 					M.add(node, SKOS.PREF_LABEL, label);
+					continue;
 				}
 				// alt labels in different languages
 				if (ALT_LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i].replace("alt_", ""));
 					M.add(node, SKOS.ALT_LABEL, label);
+					continue;
 				}				
 				// optional start / end date
 				if (header[i].equals("start")) {
@@ -203,6 +206,7 @@ public class Main {
 					} catch (ParseException pe) {
 						//
 					}
+					continue;
 				}
 				if (header[i].equals("end")) {
 					try {
@@ -212,14 +216,20 @@ public class Main {
 					} catch (ParseException pe) {
 					//
 					}
+					continue;
 				}
 				
 				// Check skos exact/narrow match etc
 				for (String prop: PROPS.keySet()) {
 					if (header[i].startsWith(prop)) {
 						IRI ref = F.createIRI(row[i]);
-						M.add(node, PROPS.get(prop), ref);	
+						M.add(node, PROPS.get(prop), ref);
+						break;
 					}
+				}
+				
+				if (header[i].startsWith("http")) {
+					M.add(node, F.createIRI(header[i]), F.createLiteral(row[i]));
 				}
 			}
 		}

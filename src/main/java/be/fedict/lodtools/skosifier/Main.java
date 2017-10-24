@@ -224,8 +224,8 @@ public class Main {
 					if (header[i].startsWith(prop)) {
 						IRI ref = F.createIRI(row[i]);
 						M.add(node, PROPS.get(prop), ref);
-						break;
 					}
+					break;
 				}
 				
 				if (header[i].startsWith("http")) {

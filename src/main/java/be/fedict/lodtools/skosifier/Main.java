@@ -95,6 +95,7 @@ public class Main {
 		PROPS.put(SKOS.CLOSE_MATCH.getLocalName().toLowerCase(), SKOS.CLOSE_MATCH);
 		PROPS.put(SKOS.BROAD_MATCH.getLocalName().toLowerCase(), SKOS.BROAD_MATCH);
 		PROPS.put(SKOS.NARROW_MATCH.getLocalName().toLowerCase(), SKOS.NARROW_MATCH);
+                PROPS.put(SKOS.SCOPE_NOTE.getLocalName().toLowerCase(), SKOS.SCOPE_NOTE);
 	}
 	
 	/**

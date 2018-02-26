@@ -1,0 +1,12 @@
+code;parent;nl;fr;exactmatch1;exactmatch2;broadmatch;broadmatch2
+FAMI;;Mijn Familie;Ma Famille;http://vocab.belgif.be/be-theme/FAMI#id;;;
+TAXE;;Mijn Belastingen;Mes Impôts;http://vocab.belgif.be/be-theme/TAXE#id;;;
+SECU;;Mijn Veiligheid;Ma Sécurité;;;http://vocab.belgif.be/be-theme/JUST#id;http://publications.europa.eu/resource/authority/data-theme/JUST
+HEAL;;Mijn Gezondheid;Ma Santé;http://vocab.belgif.be/be-theme/HEAL#id;http://publications.europa.eu/resource/authority/data-theme/HEAL;;
+WORK;;Mijn Werk;Mon Emploi;http://vocab.belgif.be/be-theme/WORK#id;;;
+MOBI;;Mijn Mobiliteit;Ma Mobilité;http://vocab.belgif.be/be-theme/MOBI#id;;;
+JUST;;Justitie;Justice;;;http://vocab.belgif.be/be-theme/JUST#id;http://publications.europa.eu/resource/authority/data-theme/JUST
+ECON;;Economie;Economie;;;http://publications.europa.eu/resource/authority/data-theme/ECON;http://vocab.belgif.be/be-theme/ECON#id
+HOUS;;Mijn Huisvesting;Mon Logement;http://vocab.belgif.be/be-theme/HOUS#id;;http://publications.europa.eu/resource/authority/data-theme/SOCI;
+ENVI;;Mijn Leefmilieu;Mon Environnement;http://vocab.belgif.be/be-theme/ENVI#id;http://publications.europa.eu/resource/authority/data-theme/ENVI;;
+FINA;;Financiën; Finance;;;http://publications.europa.eu/resource/authority/data-theme/ECON;http://vocab.belgif.be/be-theme/ECON#id

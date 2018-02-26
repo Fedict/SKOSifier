@@ -38,7 +38,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
-import java.math.BigDecimal;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -87,7 +86,9 @@ public class Main {
 			Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
 	private static final List ALT_LANGS = 
 			Arrays.asList(new String[]{ "alt_nl", "alt_fr", "alt_de", "alt_en" });
-	
+	private static final List SCOPE_LANGS = 
+			Arrays.asList(new String[]{ "scope_nl", "scope_fr", "scope_de", "scope_en" });
+		
 	private static final Map<String, IRI> PROPS = new HashMap();
 	static {
 		PROPS.put(OWL.SAMEAS.getLocalName().toLowerCase(), OWL.SAMEAS);
@@ -95,7 +96,6 @@ public class Main {
 		PROPS.put(SKOS.CLOSE_MATCH.getLocalName().toLowerCase(), SKOS.CLOSE_MATCH);
 		PROPS.put(SKOS.BROAD_MATCH.getLocalName().toLowerCase(), SKOS.BROAD_MATCH);
 		PROPS.put(SKOS.NARROW_MATCH.getLocalName().toLowerCase(), SKOS.NARROW_MATCH);
-                PROPS.put(SKOS.SCOPE_NOTE.getLocalName().toLowerCase(), SKOS.SCOPE_NOTE);
 	}
 	
 	/**
@@ -186,6 +186,7 @@ public class Main {
 				if (row[i].isEmpty()) {
 					continue;
 				}
+				
 				// pref labels in different languages
 				if (LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i]);
@@ -197,7 +198,13 @@ public class Main {
 					Literal label = F.createLiteral(row[i], header[i].replace("alt_", ""));
 					M.add(node, SKOS.ALT_LABEL, label);
 					continue;
-				}				
+				}
+                                // scope notes in different language
+				if (SCOPE_LANGS.contains(header[i])) {
+					Literal label = F.createLiteral(row[i], header[i].replace("scope_", ""));
+					M.add(node, SKOS.SCOPE_NOTE, label);
+					continue;
+				}
 				// optional start / end date
 				if (header[i].equals("start")) {
 					try {

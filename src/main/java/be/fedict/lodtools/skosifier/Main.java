@@ -86,6 +86,8 @@ public class Main {
 			Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
 	private static final List ALT_LANGS = 
 			Arrays.asList(new String[]{ "alt_nl", "alt_fr", "alt_de", "alt_en" });
+	private static final List DEF_LANGS = 
+			Arrays.asList(new String[]{ "def_nl", "def_fr", "def_de", "def_en" });
 	private static final List SCOPE_LANGS = 
 			Arrays.asList(new String[]{ "scope_nl", "scope_fr", "scope_de", "scope_en" });
 		
@@ -143,7 +145,7 @@ public class Main {
 	 * @param s string
 	 * @return identifier
 	 */
-	private static String id(String s) {
+	private static String toId(String s) {
 		return s + "#id";
 	}
 	
@@ -162,18 +164,19 @@ public class Main {
 				? baseURI.substring(0, baseURI.length()-1)
 				: baseURI;	
 		
-		IRI scheme = F.createIRI(id(vocab));
+		IRI scheme = F.createIRI(toId(vocab));
 		M.add(scheme, RDF.TYPE, SKOS.CONCEPT_SCHEME);
 		
 		for(String[] row: rows) {
-			IRI node = F.createIRI(baseURI, id(row[0]));
+			String id = row[0].replaceAll("\\.", "_");
+			IRI node = F.createIRI(baseURI, toId(id));
 		
 			// parent or not
 			if (row[1].isEmpty()) {
 				M.add(node, SKOS.TOP_CONCEPT_OF, scheme);
 				M.add(scheme, SKOS.HAS_TOP_CONCEPT, node);
 			} else { 
-				IRI parent = F.createIRI(baseURI, id(row[1]));
+				IRI parent = F.createIRI(baseURI, toId(row[1]));
 				M.add(node, SKOS.BROADER, parent);
 				M.add(parent, SKOS.NARROWER, node);
 			}
@@ -186,7 +189,7 @@ public class Main {
 				if (row[i].isEmpty()) {
 					continue;
 				}
-				
+
 				// pref labels in different languages
 				if (LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i]);
@@ -199,7 +202,13 @@ public class Main {
 					M.add(node, SKOS.ALT_LABEL, label);
 					continue;
 				}
-                                // scope notes in different language
+				// definition in different languages
+				if (DEF_LANGS.contains(header[i])) {
+					Literal label = F.createLiteral(row[i], header[i].replace("def_", ""));
+					M.add(node, SKOS.DEFINITION, label);
+					continue;
+				}
+                                // scope notes in different languages
 				if (SCOPE_LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i].replace("scope_", ""));
 					M.add(node, SKOS.SCOPE_NOTE, label);

@@ -92,7 +92,7 @@ public class Main {
 	private static final List SCOPE_LANGS = 
 			Arrays.asList(new String[]{ "scope_nl", "scope_fr", "scope_de", "scope_en" });
 		
-	private static final Map<String, IRI> PROPS = new HashMap();
+	private static final Map<String, IRI> PROPS = new HashMap<>();
 	static {
 		PROPS.put(OWL.SAMEAS.getLocalName().toLowerCase(), OWL.SAMEAS);
 		PROPS.put(SKOS.EXACT_MATCH.getLocalName().toLowerCase(), SKOS.EXACT_MATCH);
@@ -212,7 +212,7 @@ public class Main {
 					M.add(node, SKOS.DEFINITION, label);
 					continue;
 				}
-                                // scope notes in different languages
+				// scope notes in different languages
 				if (SCOPE_LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i].replace("scope_", ""));
 					M.add(node, SKOS.SCOPE_NOTE, label);
@@ -245,8 +245,8 @@ public class Main {
 					if (header[i].startsWith(prop)) {
 						IRI ref = F.createIRI(row[i]);
 						M.add(node, PROPS.get(prop), ref);
+						break;
 					}
-					break;
 				}
 				
 				if (header[i].startsWith("http")) {

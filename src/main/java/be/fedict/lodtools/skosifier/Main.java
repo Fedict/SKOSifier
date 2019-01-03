@@ -26,7 +26,6 @@
 
 package be.fedict.lodtools.skosifier;
 
-import com.google.common.base.Charsets;
 import com.opencsv.CSVReader;
 
 import java.io.File;
@@ -38,6 +37,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
+
+import java.nio.charset.StandardCharsets;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -127,9 +128,11 @@ public class Main {
 	 * 
 	 * @param fmt RDF format
 	 * @param f file to write to
+	 * @param m model
+	 * @throws java.io.IOException
 	 */
 	private static void writeFile(RDFFormat fmt, File f, Model m) throws IOException {
-		Writer out = new OutputStreamWriter(new FileOutputStream(f), Charsets.UTF_8);
+		Writer out = new OutputStreamWriter(new FileOutputStream(f), StandardCharsets.UTF_8);
 		
 		RDFWriter w = Rio.createWriter(fmt, out);
 		w.set(BasicWriterSettings.PRETTY_PRINT, true);
@@ -155,6 +158,7 @@ public class Main {
 	 * @param dir top level directory
 	 * @param fmt format
 	 * @param ext file extension
+	 * @throws IOException
 	 */
 	private static void writeSkos(File dir, RDFFormat fmt, String ext) 
 			throws IOException {

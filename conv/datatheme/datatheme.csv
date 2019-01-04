@@ -1,0 +1,15 @@
+code;parent;en;nl;fr;de;exactmatch1;broadmatch1
+AGRI;;"Agriculture, fisheries, forestry and food";"Landbouw, visserij, bosbouw en voeding";"Agriculture, pêche, sylviculture et alimentation";"Landwirtschaft, Fischerei, Forstwirtschaft und Nahrungsmittel";http://publications.europa.eu/resource/authority/data-theme/AGRI;
+ECON;;"Economy and finance";"Economie en financiën";"Économie et finances";"Wirtschaft und Finanzen";http://publications.europa.eu/resource/authority/data-theme/ECON;
+CULT;;"Culture and sport";"Cultuur en sport";"Culture et sport";"Kultur und Sport";;http://publications.europa.eu/resource/authority/data-theme/EDUC
+EDUC;;"Education";"Onderwijs";"Éducation";"Bildung";;http://publications.europa.eu/resource/authority/data-theme/EDUC
+ENER;;"Energy";"Energie";"Énergie";"Energie";http://publications.europa.eu/resource/authority/data-theme/ENER;
+ENVI;;"Environment";"Milieu";"Environnement";"Umwelt";http://publications.europa.eu/resource/authority/data-theme/ENVI;
+GOVE;;"Government and public sector";"Overheid en publieke sector";"Gouvernement et secteur public";"Regierung und öffentlicher Sektor";http://publications.europa.eu/resource/authority/data-theme/GOVE;
+HEAL;;"Health";"Gezondheid";"Santé";"Gesundheit";http://publications.europa.eu/resource/authority/data-theme/HEAL;
+INTR;;"International issues";"Internationale vraagstukken";"Questions internationales";"Internationale Themen";http://publications.europa.eu/resource/authority/data-theme/INTR;
+JUST;;"Justice, legal system and public safety";"Justitie, rechtsstelsel en openbare veiligheid";"Justice, système juridique et sécurité publique";"Justiz, Rechtssystem und öffentliche Sicherheit";http://publications.europa.eu/resource/authority/data-theme/JUST;
+REGI;;"Regions and cities";"Regio's en steden";"Régions et villes";"Regionen und Städte";http://publications.europa.eu/resource/authority/data-theme/REGI;
+SOCI;;"Population and society";"Bevolking en samenleving";"Population et société";"Bevölkerung und Gesellschaft";http://publications.europa.eu/resource/authority/data-theme/SOCI;
+TECH;;"Science and technology";"Wetenschap en technologie";"Science et technologie";"Wissenschaft und Technologie";http://publications.europa.eu/resource/authority/data-theme/TECH;
+TRAN;;"Transport";"Vervoer";"Transports";"Verkehr";http://publications.europa.eu/resource/authority/data-theme/TRAN;

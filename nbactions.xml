@@ -10,8 +10,11 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath be.fedict.lodtools.skosifier.Main C:\Data\vocab\conv\nace2008.csv C:\Data\vocab\conv  http://vocab.belgif.be/auth/nace2008/</exec.args>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
+                <exec.appArgs>C:\Java\projects\lod-skosifier\conv\budget\econbudget.csv C:\Java\projects\lod-skosifier\conv  http://vocab.belgif.be/auth/budgetcodes/</exec.appArgs>
+                <exec.vmArgs></exec.vmArgs>
+                <exec.mainClass>be.fedict.lodtools.skosifier.Main</exec.mainClass>
             </properties>
         </action>
         <action>
@@ -24,9 +27,12 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath be.fedict.lodtools.skosifier.Main C:\Data\vocab\conv\nace2008.csv C:\Data\vocab\conv  http://vocab.belgif.be/auth/nace2008/</exec.args>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
+                <exec.appArgs>C:\Java\projects\lod-skosifier\conv\budget\econbudget.csv C:\Java\projects\lod-skosifier\conv  http://vocab.belgif.be/auth/budgetcodes/</exec.appArgs>
+                <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.mainClass>be.fedict.lodtools.skosifier.Main</exec.mainClass>
             </properties>
         </action>
         <action>
@@ -39,8 +45,11 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath be.fedict.lodtools.skosifier.Main C:\Data\vocab\conv\nace2008.csv C:\Data\vocab\conv  http://vocab.belgif.be/auth/nace2008/</exec.args>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
+                <exec.appArgs>C:\Java\projects\lod-skosifier\conv\budget\econbudget.csv C:\Java\projects\lod-skosifier\conv  http://vocab.belgif.be/auth/budgetcodes/</exec.appArgs>
+                <exec.vmArgs></exec.vmArgs>
+                <exec.mainClass>be.fedict.lodtools.skosifier.Main</exec.mainClass>
             </properties>
         </action>
     </actions>

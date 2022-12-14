@@ -1,0 +1,645 @@
+﻿code;parent;fr;nl
+0;;DÉPENSES ET RECETTES NON VENTILÉES;NIET-VERDEELDE UITGAVEN EN ONTVANGSTEN
+01;0;Dépenses à ventiler entre les groupes principaux 1 à 9;Uitgaven te verdelen over de hoofdgroepen 1 tot en met 9
+01.00;01;Dépenses à ventiler entre les groupes principaux 1 à 9;Uitgaven te verdelen over de hoofdgroepen 1 tot en met 9
+02;0;Non utilisé;Niet gebruikt
+03;0;Opérations internes;Interne verrichtingen
+03.10;03;Opérations internes diverses;Diverse interne verrichtingen
+03.20;03;Régularisations avec d'autres exercices;Verrekeningen met andere dienstjaren
+04;0;Annuités en matière de leasings financiers;Annuïteiten met betrekking tot financiële leasings
+04.00;04;Annuités en matière de leasings financiers;Annuïteiten met betrekking tot financiële leasings
+06;0;Recettes à ventiler entre les groupes principaux 1 à 9;Ontvangsten te verdelen over de hoofdgroepen 1 tot en met 9
+06.00;06;Recettes à ventiler entre les groupes principaux 1 à 9;Ontvangsten te verdelen over de hoofdgroepen 1 tot en met 9
+07;0;Non utilisé;Niet gebruikt
+0'8;0;Opérations internes;Interne verrichtingen
+08.10;08;Opérations internes diverses;Diverse interne verrichtingen
+08.20;08;Régularisations avec d'autres exercices;Verrekeningen met andere dienstjaren
+1;;DÉPENSES ET RECETTES COURANTES POUR BIENS ET SERVICES;LOPENDE UITGAVEN VOOR EN ONTVANGSTEN VAN GOEDEREN EN DIENSTEN
+11;1;Salaires et charges sociales;Lonen en sociale lasten
+11.1;11;Salaires proprement dits;Eigenlijke lonen
+11.11;11;Rémunération suivant les barèmes;Bezoldiging volgens weddeschalen
+11.12;11;Autres éléments de la rémunération;Overige bezoldigingselementen
+11.2;11;Cotisations sociales à charge des employeurs, versées à des institutions ou fonds;Sociale bijdragen ten laste van de werkgevers, afgedragen aan instellingen of fondsen
+11.20;11;Cotisations sociales à charge des employeurs, versées à des institutions ou fonds;Sociale bijdragen ten laste van de werkgevers, afgedragen aan instellingen of fondsen
+11.3;11;Autres charges sociales de l'employeur;Overige sociale lasten van de werkgever
+11.31;11;Allocations directes;Directe toelagen
+11.32;11;Paiement maintenu du salaire;Doorbetaling van loon
+11.33;11;Pensions du personnel des administrations publiques;Pensioenen van het overheidspersoneel
+11.4;11;Salaire en nature;Lonen in natura
+11.40;11;Salaire en nature;Lonen in natura
+12;1;Achats de biens non durables et de services;Aankoop van niet-duurzame goederen en diensten
+12.1;12;Frais généraux de fonctionnement payés à des secteurs autres que le secteur des administrations publiques;Algemene werkingskosten vergoed aan andere sectoren dan de overheidssector
+12.11;12;Frais généraux de fonctionnement;Algemene werkingskosten
+12.12;12;Locations de bâtiments;Huurgelden van gebouwen
+12.2;12;Frais généraux de fonctionnement payés à l'intérieur du secteur des administrations publiques;Algemene werkingskosten vergoed binnen de overheidssector 
+12.21;12;Frais généraux de fonctionnement;Algemene werkingskosten
+12.22;12;Locations de bâtiments;Huurgelden van gebouwen
+12.3;12;Non utilisé;Niet gebruikt
+12.4;12;Non utilisé;Niet gebruikt
+12.5;12;Impôts payés à des sous-secteurs du secteur des administrations publiques;Belastingen betaald aan subsectoren van de overheidssector
+12.50;12;Impôts payés à des sous-secteurs du secteur des administrations publiques;Belastingen betaald aan subsectoren van de overheidssector
+13;1;Non utilisé;Niet gebruikt
+14;1;Réparations et entretien d'ouvrages en matière de travaux routiers et hydrauliques n'augmentant pas la valeur;Herstel en niet-waardevermeerderend onderhoud van wegen- en waterbouwkundige werken
+14.10;14;Frais payés à des secteurs autres que le secteur des administrations publiques;Kosten vergoed aan andere sectoren dan de overheidssector
+14.20;14;Frais payés à l'intérieur du secteur des administrations publiques;Kosten vergoed binnen de overheidssector
+16;1;Ventes de biens non durables et de services;Verkoop van niet-duurzame goederen en diensten
+16.1;16;Ventes de biens non durables et de services à d'autres secteurs que le secteur des administrations publiques;Verkoop van niet-duurzame goederen en diensten aan andere sectoren dan de overheidssector
+16.11;16;Aux entreprises;Aan bedrijven
+16.12;16;Aux ASBL au service des ménages et aux ménages;Aan vzw's ten behoeve van de gezinnen en aan gezinnen
+16.13;16;À l'étranger;Aan het buitenland
+16.2;16;Ventes de biens non durables et de services à l'intérieur du secteur des administrations publiques;Verkoop van niet-duurzame goederen en diensten binnen de overheidssector 
+16.20;16;Ventes de biens non durables et de services à l'intérieur du secteur des administrations publiques;Verkoop van niet-duurzame goederen en diensten binnen de overheidssector 
+17;1;Non utilisé;Niet gebruikt
+18;1;Recettes en matière de travaux routiers et hydrauliques;Ontvangsten afkomstig van wegen- en waterbouwkundige werken
+18.10;18;Recettes d'autres secteurs que le secteur des administrations publiques;Ontvangsten van andere sectoren dan de overheidssector
+18.20;18;Recettes à l'intérieur du secteur des administrations publiques;Ontvangsten binnen de overheidssector
+19;1;Production de biens d’investissement en régie propre;Productie van investeringsgoederen in eigen beheer 
+19.00;19;Production de biens d’investissement en régie propre;Productie van investeringsgoederen in eigen beheer 
+2;;INTÉRÊTS ET REVENUS DE LA PROPRIÉTÉ;RENTEN EN INKOMSTEN UIT EIGENDOM
+21;2;Charges d'intérêt;Interestlasten
+21.10;21;Charges d'intérêt de la dette publique en euros;Interestlasten op overheidsschuld in euro
+21.20;21;Charges d'intérêt de la dette publique en monnaies étrangères;Interestlasten op overheidsschuld in vreemde valuta
+21.30;21;Charges d'intérêt de la dette à l'intérieur du secteur des administrations publiques;Interestlasten op schuld binnen de overheidssector
+21.40;21;Intérêts de la dette commerciale;Rente op commerciële schuld 
+21.50;21;Intérêts sur leasings financiers;Rente op financiële leasings
+21.60;21;Autres intérêts;Andere rente
+22;2;Non utilisé;Niet gebruikt
+23;2;Non utilisé;Niet gebruikt
+24;2;Locations de terres;Huurgelden van gronden
+24.10;24;Paiements à d'autres secteurs que le secteur des administrations publiques;Betalingen aan andere sectoren dan de overheidssector
+24.20;24;Paiements à l'intérieur du secteur des administrations publiques;Betalingen binnen de overheidssector
+25.00;25;Dividendes distribués;Uitbetaalde dividenden
+26;2;Intérêts de créances des pouvoirs publics;Rente van overheidsvorderingen
+26.10;26;Perception d'intérêts d'autres secteurs que le secteur des administrations publiques;Rente-ontvangsten van andere sectoren dan de overheidssector
+26.20;26;Perception d'intérêts à l'intérieur du secteur des administrations publiques;Rente-ontvangsten binnen de overheidssector
+27;2;Non utilisé;Niet gebruikt
+28;2;Autres produits du patrimoine;Overige opbrengsten uit vermogen
+28.10;28;Concessions;Concessies
+28.20;28;Dividendes reçus;Ontvangen dividenden
+28.30;28;Locations de terres;Huurgelden van gronden
+3;;TRANSFERTS DE REVENUS À DESTINATION ET EN PROVENANCE D'AUTRES SECTEURS;INKOMENSOVERDRACHTEN AAN EN VAN ANDERE SECTOREN
+31;3;Subventions d'exploitation;Exploitatiesubsidies
+31.1;31;Subventions réduisant les intérêts;Rentesubsidies
+31.11;31;Subventions réduisant les intérêts aux entreprises publiques;Rentesubsidies aan overheidsbedrijven
+31.12;31;Subventions réduisant les intérêts aux autres entreprises;Rentesubsidies aan andere bedrijven
+31.2;31;Autres subventions d'exploitation aux entreprises publiques;Overige exploitatiesubsidies aan overheidsbedrijven
+31.21;31;Subventions en matière de prix aux entreprises publiques;Prijssubsidies aan overheidsbedrijven
+31.22;31;Autres subventions d'exploitation aux entreprises publiques;Overige exploitatiesubsidies aan overheidsbedrijven
+31.3;31;Autres subventions d'exploitation à des producteurs autres que les entreprises publiques;Overige exploitatiesubsidies aan andere producenten dan overheidsbedrijven
+31.31;31;Subventions en matière de prix à des producteurs autres que les entreprises publiques;Prijssubsidies aan andere producenten dan overheidsbedrijven
+31.32;31;Autres subventions d'exploitation à des producteurs autres que les entreprises publiques;Overige exploitatiesubsidies aan andere producenten dan overheidsbedrijven
+31.4;31;Réduction de cotisations patronales ciblées;Vermindering van werkgeversbijdragen voor bepaalde doelgroepen
+31.40;31;Réduction de cotisations patronales ciblées;Vermindering van werkgeversbijdragen voor bepaalde doelgroepen
+32;3;Transferts de revenus, autres que des subventions d'exploitation, aux entreprises et institutions financières;Inkomensoverdrachten, die geen exploitatiesubsidies zijn, aan bedrijven en financiële instellingen
+32.00;32;Transferts de revenus, autres que des subventions d'exploitation, aux entreprises et institutions financières;Inkomensoverdrachten, die geen exploitatiesubsidies zijn, aan bedrijven en financiële instellingen
+33;3;Transferts de revenus aux ASBL au service des ménages;Inkomensoverdrachten aan vzw's ten behoeve van de gezinnen
+33.00;33;Transferts de revenus aux ASBL au service des ménages;Inkomensoverdrachten aan vzw's ten behoeve van de gezinnen
+34;3;Transferts de revenus aux ménages;Inkomensoverdrachten aan gezinnen
+34.1;34;Pensions de veuves et orphelins du personnel des administrations publiques;Weduwen- en wezenpensioenen van het overheidspersoneel
+34.10;34;Pensions de veuves et orphelins du personnel des administrations publiques;Weduwen- en wezenpensioenen van het overheidspersoneel
+34.2;34;Pensions de guerre;Oorlogspensioenen
+34.20;34;Pensions de guerre;Oorlogspensioenen
+34.3;34;Autres prestations sociales;Overige sociale uitkeringen
+34.31;34;Prestations en espèces;Geldelijke uitkeringen
+34.32;34;Prestations en nature;Uitkeringen in natura
+34.4;34;Autres prestations aux ménages en tant que consommateurs;Overige uitkeringen aan gezinnen als verbruikers
+34.41;34;Prestations en espèces;Geldelijke uitkeringen
+34.42;34;Prestations en nature;Uitkeringen in natura
+34.5;34;Autres prestations aux ménages en tant que producteurs;Overige uitkeringen aan gezinnen als producenten
+34.50;34;Autres prestations aux ménages en tant que producteurs;Overige uitkeringen aan gezinnen als producenten
+35;3;Transferts de revenus à l'étranger;Inkomensoverdrachten aan het buitenland
+35.10;35;Aux institutions de l'UE;Aan EU-instellingen
+35.20;35;Aux pays membres de l'UE (administrations publiques);Aan lidstaten van de EU (overheden)
+35.30;35;Aux pays membres de l'UE (non-administrations publiques);Aan lidstaten van de EU (niet-overheden)
+35.40;35;Aux institutions internationales autres que les institutions de l'UE;Aan internationale instellingen andere dan de EU-instellingen
+35.50;35;Aux pays autres que les pays membres de l'UE (administrations publiques);Aan landen andere dan de lidstaten van de EU (overheden)
+35.60;35;Aux pays autres que les pays membres de l'UE (non-administrations publiques);Aan landen andere dan de lidstaten van de EU (niet-overheden)
+36;3;Impôts indirects et taxes;Indirecte belastingen en heffingen
+36.10;36;Taxes à l'importation;Invoerrechten
+36.20;36;Droits d'accise et autres impôts sur la consommation;Accijnzen en andere verbruiksbelastingen
+36.30;36;Taxe sur la valeur ajoutée;Belasting op de toegevoegde waarde
+36.40;36;Droits d'enregistrement;Registratierechten
+36.50;36;Bénéfices des monopoles fiscaux des pouvoirs publics ou d'entreprises publiques à caractère de monopole;Winsten van fiscale overheidsmonopolies of van openbare bedrijven met een monopolistisch karakter
+36.60;36;Taxe de circulation;Verkeersbelasting
+36.70;36;Taxes sur la pollution;Milieuheffingen
+36.80;36;Taxes et impôts immobiliers, à l'exception du précompte immobilier;Heffingen en belastingen op onroerende goederen, met uitzondering van de onroerende voorheffing
+36.90;36;Taxes diverses;Diverse belastingen
+37;3;Impôts directs et cotisations versées aux administrations de sécurité sociale;Directe belastingen en bijdragen gestort aan de socialezekerheidsinstellingen
+37.10;37;Impôts directs à charge des entreprises, institutions de crédit et sociétés d'assurance;Directe belastingen ten laste van bedrijven, kredietinstellingen en verzekeringsmaatschappijen
+37.20;37;Impôts directs à charge des ménages et des ASBL au service des ménages;Directe belastingen ten laste van gezinnen en vzw's ten behoeve van de gezinnen
+37.30;37;Contributions sécurité sociale à charge des employeurs - pouvoirs publics;Socialezekerheidsbijdragen ten laste van werkgevers - overheid
+37.40;37;Contributions sécurité sociale à charge d'autres employeurs;Socialezekerheidsbijdragen ten laste van andere werkgevers
+37.50;37;Contributions sécurité sociale à charge des travailleurs;Socialezekerheidsbijdragen ten laste van werknemers
+37.60;37;Retenues pour le Fonds des pensions de survie;Bijdragen voor het Fonds voor Overlevingspensioenen
+37.70;37;Autres contributions de nature obligatoire;Andere verplichte bijdragen
+38;3;Autres transferts de revenus des entreprises, institutions financières, ASBL au service des ménages et des ménages et subsides reçus;Overige inkomensoverdrachten van bedrijven, financiële instellingen, vzw's ten behoeve van de gezinnen en van gezinnen en ontvangen subsidies
+38.10;38;Des entreprises;Van bedrijven
+38.20;38;Des institutions de crédit;Van kredietinstellingen 
+38.30;38;Des sociétés d'assurance;Van verzekeringsmaatschappijen
+38.40;38;Des ASBL au service des ménages;Van vzw's ten behoeve van de gezinnen
+38.50;38;Des ménages;Van gezinnen
+38.60;38;Subsides reçus;Ontvangen subsidies
+39;3;Transferts de revenus de l'étranger;Inkomensoverdrachten van het buitenland
+39.10;39;Des institutions de l'UE;Van EU-instellingen
+39.20;39;Des pays membres de l'UE (administrations publiques);Van lidstaten van de EU (overheden)
+39.30;39;Des pays membres de l'UE (non-administrations publiques);Van lidstaten van de EU (niet-overheden)
+39.40;39;Des institutions internationales autres que les institutions de l'UE;Van internationale instellingen andere dan de EU-instellingen
+39.50;39;Des pays autres que les pays membres de l'UE (administrations publiques);Van landen andere dan de lidstaten van de EU (overheden)
+39.60;39;Des pays autres que les pays membres de l'UE (non-administrations publiques);Van landen andere dan de lidstaten van de EU (niet-overheden)
+4;;TRANSFERTS DE REVENUS À L'INTÉRIEUR DU SECTEUR DES ADMINISTRATIONS PUBLIQUES;INKOMENSOVERDRACHTEN BINNEN DE OVERHEIDSSECTOR 
+41;4;Transferts de revenus à l'intérieur d'un groupe institutionnel;Inkomensoverdrachten binnen een institutionele groep
+41.10;41;Au pouvoir institutionnel;Aan de institutionele overheid
+41.20;41;Aux fonds budgétaires non organiques;Aan niet-organieke begrotingsfondsen
+41.30;41;Aux services administratifs à comptabilité autonome (SACA);Aan administratieve diensten met boekhoudkundige autonomie (ADBA)
+41.40;41;Aux organismes administratifs publics (OAP);Aan administratieve openbare instellingen (AOI)
+41.50;41;Aux établissements d'enseignement du pouvoir institutionnel;Aan onderwijsinstellingen van de institutionele overheid
+41.60;41;Aux ASBL des administrations publiques;Aan vzw's van de overheid
+41.70;41;Aux autres unités publiques;Aan andere eenheden van de overheid
+42;4;Transferts de revenus aux administrations de sécurité sociale;Inkomensoverdrachten aan de socialezekerheidsinstellingen
+42.10;42;Vieillesse, décès, survie;Ouderdom, overlijden, nabestaanden
+42.20;42;Maladie;Ziekte
+42.30;42;Invalidité et handicap;Invaliditeit en handicap
+42.40;42;Chômage;Werkloosheid
+42.50;42;Charges de famille;Gezinslasten
+42.60;42;Accidents de travail et maladies professionnelles;Arbeidsongevallen en beroepsziekten
+42.70;42;Formation professionnelle des adultes;Beroepsopleiding voor volwassenen
+42.80;42;Subvention globale à la sécurité sociale;Globale rijkstoelage aan de sociale zekerheid
+42.90;42;Autres transferts de revenus aux administrations de sécurité sociale;Overige inkomensoverdrachten aan de socialezekerheidsinstellingen
+43;4;Transferts de revenus aux administrations publiques locales;Inkomensoverdrachten aan lokale overheden
+43.1;43;Aux provinces;Aan provincies
+43.11;43;Contributions générales;Algemene bijdragen
+43.12;43;Contributions spécifiques;Specifieke bijdragen
+43.13;43;Contributions aux charges d'intérêt;Bijdragen voor rentelasten
+43.14;43;Contributions aux traitements du personnel enseignant;Bijdragen voor lonen van het onderwijzend personeel
+43.15;43;Contributions aux pensions du personnel enseignant;Bijdragen voor rustpensioenen van het onderwijzend personeel
+43.16;43;Contributions aux autres frais de fonctionnement de l'enseignement;Bijdragen voor overige werkingskosten van het onderwijs
+43.2;43;Aux communes;Aan gemeenten
+43.21;43;Contributions générales;Algemene bijdragen
+43.22;43;Contributions spécifiques;Specifieke bijdragen
+43.23;43;Contributions aux charges d'intérêt;Bijdragen voor rentelasten
+43.24;43;Contributions aux traitements du personnel enseignant;Bijdragen voor lonen van het onderwijzend personeel
+43.25;43;Contributions aux pensions du personnel enseignant;Bijdragen voor rustpensioenen van het onderwijzend personeel
+43.26;43;Contributions aux autres frais de fonctionnement de l'enseignement;Bijdragen voor overige werkingskosten van het onderwijs
+43.3;43;Non utilisé;Niet gebruikt
+43.4;43;Aux ASBL des pouvoirs locaux;Aan vzw's van de lokale overheden
+43.40;43;Aux ASBL des pouvoirs locaux;Aan vzw's van de lokale overheden
+43.5;43;Aux autres administrations publiques locales;Aan overige lokale overheden
+43.51;43;Zones de police;Politiezones
+43.52;43;CPAS;OCMW's
+43.53;43;Intercommunales du secteur S.1313;Intercommunales van de sector S.1313
+43.54;43;Zones de secours;Hulpverleningszones
+43.59;43;Autres pouvoirs locaux;Overige lokale overheden
+44;4;Transferts de revenus à l'enseignement autonome subsidié;Inkomensoverdrachten aan het gesubsidieerd autonoom onderwijs
+44.10;44;Contributions aux traitements du personnel enseignant;Bijdragen voor lonen van het onderwijzend personeel
+44.20;44;Contributions aux pensions du personnel enseignant;Bijdragen voor rustpensioenen van het onderwijzend personeel
+44.30;44;Contributions aux autres frais de fonctionnement de l'enseignement;Bijdragen voor overige werkingskosten van het onderwijs
+44.40;44;Contributions aux charges d'intérêt de l'enseignement;Bijdragen voor rentelasten van het onderwijs
+45;4;Transferts de revenus à d'autres groupes institutionnels (pouvoir fédéral, communautés, régions, commissions communautaires);Inkomensoverdrachten aan andere institutionele groepen (federale overheid, gemeenschappen, gewesten, gemeenschapscommissies)
+45.1;45;Transferts de revenus aux commissions communautaires;Inkomensoverdrachten aan de gemeenschapscommissies
+45.11;45;Commission communautaire française;Franse Gemeenschapscommissie
+45.12;45;Commission communautaire flamande;Vlaamse Gemeenschapscommissie
+45.13;45;Commission communautaire commune;Gemeenschappelijke Gemeenschapscommissie
+45.2;45;Transferts de revenus aux communautés;Inkomensoverdrachten aan de gemeenschappen
+45.24;45;Communauté française;Franse Gemeenschap
+45.25;45;Communauté flamande;Vlaamse Gemeenschap
+45.26;45;Communauté germanophone;Duitstalige Gemeenschap
+45.3;45;Transferts de revenus aux régions;Inkomensoverdrachten aan de gewesten
+45.34;45;Région wallonne;Waals Gewest
+45.35;45;Région de Bruxelles-Capitale;Brussels Hoofdstedelijk Gewest
+45.4;45;Transferts de revenus au pouvoir fédéral;Inkomensoverdrachten aan de federale overheid
+45.40;45;Pouvoir fédéral;Federale overheid 
+45.5;45;Transferts de revenus vers des unités interrégionales;Inkomensoverdrachten aan interregionale eenheden
+45.50;45;Unités interrégionales;Interregionale eenheden
+46;4;Transferts de revenus à l'intérieur du groupe institutionnel;Inkomensoverdrachten binnen een institutionele groep
+46.10;46;Du pouvoir institutionnel;Van de institutionele overheid
+46.20;46;Des fonds budgétaires non organiques;Van niet-organieke begrotingsfondsen
+46.30;46;Des services administratifs à comptabilité autonome (SACA);Van administratieve diensten met boekhoudkundige autonomie (ADBA)
+46.40;46;Des organismes administratifs publics (OAP);Van administratieve openbare instellingen (AOI)
+46.50;46;Des établissements d'enseignement du pouvoir institutionnel;Van onderwijsinstellingen van de institutionele overheid
+46.60;46;Des ASBL des administrations publiques;Van vzw's van de overheid
+46.70;46;Des autres unités publiques;Van andere eenheden van de overheid
+47;4;Transferts de revenus des administrations de sécurité sociale;Inkomensoverdrachten van de socialezekerheidsinstellingen
+47.10;47;Vieillesse, décès, survie;Ouderdom, overlijden, nabestaanden
+47.20;47;Maladie;Ziekte
+47.30;47;Invalidité et handicap;Invaliditeit en handicap
+47.40;47;Chômage;Werkloosheid
+47.50;47;Charges de famille;Gezinslasten
+47.60;47;Accidents de travail et maladies professionnelles;Arbeidsongevallen en beroepsziekten
+47.70;47;Formation professionnelle des adultes;Beroepsopleiding voor volwassenen
+47.80;47;Autres transferts de revenus des administrations de sécurité sociale;Overige inkomenoverdrachten van de socialezekerheidsinstellingen
+48;4;Transferts de revenus des administrations publiques locales;Inkomensoverdrachten van lokale overheden
+48.1;48;Des provinces;Van provincies
+48.11;48;Contributions générales;Algemene bijdragen
+48.12;48;Contributions spécifiques;Specifieke bijdragen
+48.2;48;Des communes;Van gemeenten
+48.21;48;Contributions générales;Algemene bijdragen
+48.22;48;Contributions spécifiques;Specifieke bijdragen
+48.3;48;Non utilisé;Niet gebruikt
+48.4;48;Des ASBL des pouvoirs locaux;Van vzw's van de lokale overheden
+48.40;48;Des ASBL des pouvoirs locaux;Van vzw's van de lokale overheden
+48.5;48;Des autres administrations publiques locales;Van overige lokale overheden
+48.51;48;Zones de police;Politiezones
+48.52;48;CPAS;OCMW's
+48.53;48;Intercommunales du secteur S.1313;Intercommunales van de sector S.1313
+48.54;48;Zones de secours;Hulpverleningszones
+48.59;48;Autres pouvoirs locaux;Overige lokale overheden
+49;4;Transferts de revenus d'autres groupes institutionnels (pouvoir fédéral, communautés, régions, commissions communautaires);Inkomensoverdrachten van andere institutionele groepen (federale overheid, gemeenschappen, gewesten, gemeenschapscommissies)
+49.1;49;Transferts de revenus des commissions communautaires;Inkomensoverdrachten van de gemeenschapscommissies
+49.11;49;Commission communautaire française;Franse Gemeenschapscommissie
+49.12;49;Commission communautaire flamande;Vlaamse Gemeenschapscommissie
+49.13;49;Commission communautaire commune;Gemeenschappelijke Gemeenschapscommissie
+49.2;49;Transferts de revenus des communautés;Inkomensoverdrachten van de gemeenschappen
+49.24;49;Communauté française;Franse Gemeenschap
+49.25;49;Communauté flamande;Vlaamse Gemeenschap
+49.26;49;Communauté germanophone;Duitstalige Gemeenschap
+49.3;49;Transferts de revenus des régions;Inkomensoverdrachten van de gewesten
+49.34;49;Région wallonne;Waals Gewest
+49.35;49;Région de Bruxelles-Capitale;Brussels Hoofdstedelijk Gewest
+49.4;49;Transferts de revenus du pouvoir fédéral;Inkomensoverdrachten van de federale overheid
+49.40;49;Pouvoir fédéral;Federale overheid 
+49.5;49;Transferts de revenus d'unités interrégionales;Inkomensoverdrachten van interregionale eenheden
+49.50;49;Unités interrégionales;Interregionale eenheden
+5;;TRANSFERTS EN CAPITAL À DESTINATION ET EN PROVENANCE D'AUTRES SECTEURS;KAPITAALOVERDRACHTEN AAN EN VAN ANDERE SECTOREN
+51;5;Transferts en capital aux entreprises et institutions financières;Kapitaaloverdrachten aan bedrijven en financiële instellingen
+51.1;51;Aides à l'investissement;Investeringsbijdragen
+51.11;51;Aides à l'investissement aux entreprises publiques;Investeringsbijdragen aan overheidsbedrijven
+51.12;51;Aides à l'investissement aux entreprises privées;Investeringsbijdragen aan privébedrijven
+51.2;51;Autres transferts en capital aux entreprises;Overige kapitaaloverdrachten aan bedrijven
+51.21;51;Autres transferts en capital aux entreprises publiques;Overige kapitaaloverdrachten aan overheidsbedrijven
+51.22;51;Autres transferts en capital aux entreprises privées;Overige kapitaaloverdrachten aan privébedrijven
+51.3;51;Autres transferts en capital aux institutions de crédit;Overige kapitaaloverdrachten aan kredietinstellingen
+51.30;51;Autres transferts en capital aux institutions de crédit;Overige kapitaaloverdrachten aan kredietinstellingen
+51.4;51;Autres transferts en capital aux sociétés d'assurance;Overige kapitaaloverdrachten aan verzekeringsmaatschappijen
+51.40;51;Autres transferts en capital aux sociétés d'assurance;Overige kapitaaloverdrachten aan verzekeringsmaatschappijen
+52;5;Transferts en capital aux ASBL au service des ménages;Kapitaaloverdrachten aan vzw's ten behoeve van de gezinnen
+52.10;52;Aides à l'investissement aux ASBL au service des ménages;Investeringsbijdragen aan vzw's ten behoeve van de gezinnen
+52.20;52;Autres transferts en capital aux ASBL au service des ménages;Overige kapitaaloverdrachten aan vzw's ten behoeve van de gezinnen
+53;5;Transferts en capital aux ménages;Kapitaaloverdrachten aan gezinnen
+53.10;53;Aides à l'investissement aux ménages;Investeringsbijdragen aan gezinnen 
+53.20;53;Autres transferts en capital aux ménages;Overige kapitaaloverdrachten aan gezinnen
+54;5;Transferts en capital à l'étranger;Kapitaaloverdrachten aan het buitenland
+54.11;54;Aux institutions de l'UE : aides à l'investissement;Aan EU-instellingen: investeringsbijdragen
+54.12;54;Aux institutions de l'UE: autres transferts en capital;Aan EU-instellingen: overige kapitaaloverdrachten
+54.21;54;Aux pays membres de l'UE (administrations publiques) : aides à l'investissement;Aan lidstaten van de EU (overheden): investeringsbijdragen
+54.22;54;Aux pays membres de l'UE (administrations publiques) : autres tranferts en capital;Aan lidstaten van de EU (overheden): overige kapitaaloverdrachten
+54.31;54;Aux pays membres de l'UE (non-administrations publiques) : aides à l'investissement;Aan lidstaten van de EU (niet-overheden): investeringsbijdragen
+54.32;54;Aux pays membres de l'UE (non-administrations publiques) : autres tranferts en capital;Aan lidstaten van de EU (niet-overheden): overige kapitaaloverdrachten
+54.41;54;Aux institutions internationales autres que les institutions de l'UE : aides à l'investissement;Aan internationale instellingen andere dan de EU-instellingen: investeringsbijdragen
+54.42;54;Aux institutions internationales autres que les institutions de l'UE : autres tranferts en capital;Aan internationale instellingen andere dan de EU-instellingen: overige kapitaaloverdrachten
+54.51;54;Aux pays autres que les pays membres de l'UE (administrations publiques) : aides à l'investissement;Aan landen andere dan de lidstaten van de EU (overheden): investeringsbijdragen
+54.52;54;Aux pays autres que les pays membres de l'UE (administrations publiques) : autres transferts en capital;Aan landen andere dan de lidstaten van de EU (overheden): overige kapitaaloverdrachten
+54.61;54;Aux pays autres que les pays membres de l'UE (non-administrations publiques) : aides à l'investissement;Aan landen andere dan de lidstaten van de EU (niet-overheden): investeringsbijdragen
+54.62;54;Aux pays autres que les pays membres de l'UE (non-administrations publiques) : autres transferts en capital;Aan landen andere dan de lidstaten van de EU (niet-overheden): overige kapitaaloverdrachten
+56;5;Impôts en capital;Vermogensheffingen
+56.10;56;Des entreprises;Van bedrijven
+56.20;56;Des institutions de crédit;Van kredietinstellingen
+56.30;56;Des sociétés d'assurance;Van verzekeringsmaatschappijen
+56.40;56;Des ASBL au service des ménages;Van vzw's ten behoeve van de gezinnen
+56.50;56;Des ménages;Van gezinnen
+57;5;Transferts en capital des entreprises et institutions financières (à l'exclusion des impôts en capital);Kapitaaloverdrachten van bedrijven en financiële instellingen (exclusief vermogensheffingen)
+57.10;57;Non utilisé;Niet gebruikt
+57.20;57;Autres transferts en capital des entreprises;Overige kapitaaloverdrachten van bedrijven
+57.30;57;Autres transferts en capital des institutions de crédit;Overige kapitaaloverdrachten van kredietinstellingen
+57.40;57;Autres transferts en capital des sociétés d'assurance;Overige kapitaaloverdrachten van verzekeringsmaatschappijen
+58;5;Transferts en capital des ASBL au service des ménages et des ménages (à l'exclusion des impôts en capital);Kapitaaloverdrachten van vzw's ten behoeve van de gezinnen en van gezinnen (exclusief vermogensheffingen)
+58.10;58;Des ASBL au service des ménages;Van vzw's ten behoeve van de gezinnen
+58.20;58;Des ménages;Van gezinnen
+59;5;Transferts en capital de l'étranger;Kapitaaloverdrachten van het buitenland
+59.11;59;Des institutions de l'UE : aides à l'investissement;Van EU-instellingen: investeringsbijdragen
+59.12;59;Des institutions de l'UE : autres transferts en capital;Van EU-instellingen: overige kapitaaloverdrachten
+59.21;59;Des pays membres de l'UE (administrations publiques) : aides à l'investissement;Van lidstaten van de EU (overheden): investeringsbijdragen
+59.22;59;Des pays membres de l'UE (administrations publiques) : autres transferts en capital;Van lidstaten van de EU (overheden): overige kapitaaloverdrachten
+59.30;59;Des pays membres de l'UE (non-administrations publiques): autres transferts en capital;Van lidstaten van de EU (niet-overheden): overige kapitaaloverdrachten
+59.41;59;Des institutions internationales autres que les institutions de l'UE : aides à l'investissement;Van internationale instellingen andere dan de EU-instellingen: investeringsbijdragen
+59.42;59;Des institutions internationales autres que les institutions de l'UE : autres transferts en capital;Van internationale instellingen andere dan de EU-instellingen: overige kapitaaloverdrachten
+59.51;59;Des pays autres que les pays membres de l'UE (administrations publiques) : aides à l'investissement;Van landen andere dan de lidstaten van de EU (overheden): investeringsbijdragen
+59.52;59;Des pays autres que les pays membres de l'UE (administrations publiques) : autres transferts en capital;Van landen andere dan de lidstaten van de EU (overheden): overige kapitaaloverdrachten
+59.60;59;Des pays autres que les pays membres de l'UE (non-administrations publiques): autres transferts en capital;Van landen andere dan de lidstaten van de EU (niet-overheden): overige kapitaaloverdrachten
+6;;TRANSFERTS EN CAPITAL À L'INTÉRIEUR DU SECTEUR DES ADMINISTRATIONS PUBLIQUES;KAPITAALOVERDRACHTEN BINNEN DE OVERHEIDSSECTOR 
+61;6;Transferts en capital à l'intérieur d'un groupe institutionnel;Kapitaaloverdrachten binnen een institutionele groep
+61.11;61;Aides à l'investissement au pouvoir institutionnel;Investeringsbijdragen aan de institutionele overheid
+61.12;61;Autres transferts en capital au pouvoir institutionnel;Overige kapitaaloverdrachten aan de institutionele overheid
+61.21;61;Aides à l'investissement aux fonds budgétaires non organiques;Investeringsbijdragen aan niet-organieke begrotingsfondsen
+61.22;61;Autres transferts en capital aux fonds budgétaires non organiques;Overige kapitaaloverdrachten aan niet-organieke begrotingsfondsen
+61.31;61;Aides à l'investissement aux services administratifs à comptabilité autonome (SACA);Investeringsbijdragen aan administratieve diensten met boekhoudkundige autonomie (ADBA) 
+61.32;61;Autres transferts en capital aux services administratifs à comptabilité autonome (SACA);Overige kapitaaloverdrachten aan administratieve diensten met boekhoudkundige autonomie (ADBA) 
+61.41;61;Aides à l'investissement aux organismes administratifs publics (OAP);Investeringsbijdragen aan administratieve openbare instellingen (AOI)
+61.42;61;Autres transferts en capital aux organismes administratifs publics (OAP);Overige kapitaaloverdrachten aan administratieve openbare instellingen (AOI)
+61.51;61;Aides à l'investissement aux établissements d'enseignement du pouvoir institutionnel;Investeringsbijdragen aan onderwijsinstellingen van de institutionele overheid
+61.52;61;Autres transferts en capital aux établissements d'enseignement du pouvoir institutionnel;Overige kapitaaloverdrachten aan onderwijsinstellingen van de institutionele overheid
+61.61;61;Aides à l'investissement aux ASBL des administrations publiques;Investeringsbijdragen aan vzw's van de overheid
+61.62;61;Autres transferts en capital aux ASBL des administrations publiques;Overige kapitaaloverdrachten aan vzw's van de overheid
+61.71;61;Aides à l'investissement aux autres unités publiques;Investeringsbijdragen aan andere eenheden van de overheid
+61.72;61;Autres transferts en capital aux autres unités publiques;Overige kapitaaloverdrachten aan andere eenheden van de overheid
+62;6;Transferts en capital aux administrations de sécurité sociale;Kapitaaloverdrachten aan de socialezekerheidsinstellingen
+62.10;62;Aides à l'investissement;Investeringsbijdragen
+62.20;62;Autres transferts en capital;Overige kapitaaloverdrachten
+63;6;Transferts en capital aux administrations publiques locales;Kapitaaloverdrachten aan lokale overheden
+63.11;63;Aides à l'investissement aux provinces;Investeringsbijdragen aan provincies
+63.12;63;Autres transferts en capital aux provinces;Overige kapitaaloverdrachten aan provincies
+63.21;63;Aides à l'investissement aux communes;Investeringsbijdragen aan gemeenten
+63.22;63;Autres transferts en capital aux communes;Overige kapitaaloverdrachten aan gemeenten
+63.31;63;Non utilisé;Niet gebruikt
+63.32;63;Non utilisé;Niet gebruikt
+63.41;63;Aides à l'investissement aux ASBL des pouvoirs locaux;Investeringsbijdragen aan vzw's van de lokale overheden 
+63.42;63;Autres transferts en capital aux ASBL des pouvoirs locaux;Overige kapitaaloverdrachten aan vzw's van de lokale overheden 
+63.51;63;Zones de police;Politiezones
+63.52;63;CPAS;OCMW's
+63.53;63;Intercommunales du secteur S.1313;Intercommunales van de sector S.1313
+63.54;63;Zones de secours;Hulpverleningszones
+63.59;63;Autres pouvoirs locaux;Overige lokale overheden 
+64;6;Transferts en capital à l'enseignement autonome subsidié;Kapitaaloverdrachten aan het gesubsidieerd autonoom onderwijs
+64.10;64;Aides à l'investissement;Investeringsbijdragen
+64.20;64;Autres transferts en capital;Overige kapitaaloverdrachten
+65;6;Transferts en capital à d'autres groupes institutionnels (pouvoir fédéral, communautés, régions, commissions communautaires);Kapitaaloverdrachten aan andere institutionele groepen (federale overheid, gemeenschappen, gewesten, gemeenschapscommissies)
+65.1;65;Transferts en capital aux commissions communautaires;Kapitaaloverdrachten aan de gemeenschapscommissies
+65.11;65;Commission communautaire française;Franse Gemeenschapscommissie
+65.12;65;Commission communautaire flamande;Vlaamse Gemeenschapscommissie
+65.13;65;Commission communautaire commune;Gemeenschappelijke Gemeenschapscommissie
+65.2;65;Transferts en capital aux communautés;Kapitaaloverdrachten aan de gemeenschappen
+65.24;65;Communauté française;Franse Gemeenschap
+65.25;65;Communauté flamande;Vlaamse Gemeenschap
+65.26;65;Communauté germanophone;Duitstalige Gemeenschap
+65.3;65;Transferts en capital aux régions;Kapitaaloverdrachten aan de gewesten
+65.34;65;Région wallonne;Waals Gewest
+65.35;65;Région de Bruxelles-Capitale;Brussels Hoofdstedelijk Gewest
+65.4;65;Transferts en capital au pouvoir fédéral;Kapitaaloverdrachten aan de federale overheid
+65.40;65;Pouvoir fédéral;Federale overheid 
+65.5;65;Transferts en capital vers des unités interrégionales;Kapitaaloverdrachten aan interregionale eenheden
+65.50;65;Unités interrégionales;Interregionale eenheden
+66;6;Transferts en capital à l'intérieur d'un groupe institutionnel;Kapitaaloverdrachten binnen een institutionele groep
+66.11;66;Aides à l'investissement du pouvoir institutionnel;Investeringsbijdragen van de institutionele overheid
+66.12;66;Autres transferts en capital du pouvoir institutionnel;Overige kapitaaloverdrachten van de institutionele overheid
+66.21;66;Aides à l'investissement des fonds budgétaires non organiques;Investeringsbijdragen van niet-organieke begrotingsfondsen
+66.22;66;Autres transferts en capital des fonds budgétaires non organiques;Overige kapitaaloverdrachten van niet-organieke begrotingsfondsen
+66.31;66;Aides à l'investissement des services administratifs à comptabilité autonome (SACA);Investeringsbijdragen van administratieve diensten met boekhoudkundige autonomie (ADBA) 
+66.32;66;Autres transferts en capital des services administratifs à comptabilité autonome (SACA);Overige kapitaaloverdrachten van administratieve diensten met boekhoudkundige autonomie (ADBA) 
+66.41;66;Aides à l'investissement des organismes administratifs publics (OAP);Investeringsbijdragen van administratieve openbare instellingen (AOI)
+66.42;66;Autres transferts en capital des organismes administratifs publics (OAP);Overige kapitaaloverdrachten van administratieve openbare instellingen (AOI)
+66.51;66;Aides à l'investissement des établissements d'enseignement du pouvoir institutionnel;Investeringsbijdragen van onderwijsinstellingen van de institutionele overheid
+66.52;66;Autres transferts en capital des établissements d'enseignement du pouvoir institutionnel;Overige kapitaaloverdrachten van onderwijsinstellingen van de institutionele overheid
+66.61;66;Aides à l'investissement des ASBL des administrations publiques;Investeringsbijdragen van vzw's van de overheid
+66.62;66;Autres transferts en capital des ASBL des administrations publiques;Overige kapitaaloverdrachten van vzw's van de overheid
+66.71;66;Aides à l'investissement des autres unités publiques;Investeringsbijdragen van andere eenheden van de overheid
+66.72;66;Autres transferts en capital des autres unités publiques;Overige kapitaaloverdrachten van andere eenheden van de overheid
+67;6;Transferts en capital des administrations de sécurité sociale;Kapitaaloverdrachten van de socialezekerheidsinstellingen
+67.00;67;Transferts en capital des administrations de sécurité sociale;Kapitaaloverdrachten van de socialezekerheidsinstellingen
+68;6;Transferts en capital des administrations publiques locales;Kapitaaloverdrachten van lokale overheden
+68.11;68;Aides à l'investissement des provinces;Investeringsbijdragen van provincies
+68.12;68;Autres transferts en capital des provinces;Overige kapitaaloverdrachten van provincies
+68.21;68;Aides à l'investissement des communes;Investeringsbijdragen van gemeenten
+68.22;68;Autres transferts en capital des communes;Overige kapitaaloverdrachten van gemeenten
+68.31;68;Non utilisé;Niet gebruikt
+68.32;68;Non utilisé;Niet gebruikt
+68.41;68;Aides à l'investissement des ASBL des pouvoirs locaux;Investeringsbijdragen van vzw's van de lokale overheden
+68.42;68;Autres transferts en capital des ASBL des pouvoirs locaux;Overige kapitaaloverdrachten van vzw's van de lokale overheden
+68.51;68;Zones de police;Politiezones
+68.52;68;CPAS;OCMW's
+68.53;68;Intercommunales du secteur S.1313;Intercommunales van de sector S.1313
+68.54;68;Zones de secours;Hulpverleningszones
+68.59;68;Autres pouvoirs locaux;Overige lokale overheden 
+69;6;Transferts en capital d'autres groupes institutionnels (pouvoir fédéral, communautés, régions, commissions communautaires);Kapitaaloverdrachten van andere institutionele groepen (federale overheid, gemeenschappen, gewesten, gemeenschapscommissies)
+69.1;69;Transferts en capital des commissions communautaires;Kapitaaloverdrachten van de gemeenschapscommissies
+69.11;69;Commission communautaire française;Franse Gemeenschapscommissie
+69.12;69;Commission communautaire flamande;Vlaamse Gemeenschapscommissie
+69.13;69;Commission communautaire commune;Gemeenschappelijke Gemeenschapscommissie
+69.2;69;Transferts en capital des communautés;Kapitaaloverdrachten van de gemeenschappen
+69.24;69;Communauté française;Franse Gemeenschap
+69.25;69;Communauté flamande;Vlaamse Gemeenschap
+69.26;69;Communauté germanophone;Duitstalige Gemeenschap
+69.3;69;Transferts en capital des régions;Kapitaaloverdrachten van de gewesten
+69.34;69;Région wallonne;Waals Gewest
+69.35;69;Région de Bruxelles-Capitale;Brussels Hoofdstedelijk Gewest
+69.4;69;Transferts en capital du pouvoir fédéral;Kapitaaloverdrachten van de federale overheid
+69.40;69;Pouvoir fédéral;Federale overheid
+69.5;69;Transferts en capital d'unités interrégionales;Kapitaaloverdrachten van interregionale eenheden
+69.50;69;Unités interrégionales;Interregionale eenheden
+7;;INVESTISSEMENTS ET DÉSINVESTISSEMENTS;INVESTERINGEN EN DESINVESTERINGEN
+71;7;Achats de terrains et de bâtiments dans le pays;Aankoop van gronden en gebouwen in het binnenland
+71.1;71;Achats de terrains;Aankoop van gronden
+71.11;71;À l'intérieur du secteur des administrations publiques;Binnen de overheidssector
+71.12;71;Dans d'autres secteurs que le secteur des administrations publiques;In andere sectoren dan de overheidssector
+71.2;71;Achats d'ouvrages existants en matière de travaux routiers et hydrauliques;Aankoop van bestaande wegen- en waterbouwkundige werken
+71.21;71;À l'intérieur du secteur des administrations publiques;Binnen de overheidssector 
+71.22;71;Dans d'autres secteurs que le secteur des administrations publiques;In andere sectoren dan de overheidssector
+71.3;71;Achats de bâtiments existants;Aankoop van bestaande gebouwen
+71.31;71;À l'intérieur du secteur des administrations publiques;Binnen de overheidssector 
+71.32;71;Dans d'autres secteurs que le secteur des administrations publiques;In andere sectoren dan de overheidssector
+72;7;Constructions de bâtiments;Nieuwbouw van gebouwen
+72.00;72;Constructions de bâtiments;Nieuwbouw van gebouwen
+72.90;72;Travaux immobiliers réalisés en régie propre;Werken in onroerende staat uitgevoerd in eigen beheer
+73;7;Travaux routiers et hydrauliques;Wegen- en waterbouwkundige werken
+73.10;73;Travaux routiers;Wegenbouwkundige werken
+73.20;73;Travaux hydrauliques;Waterbouwkundige werken
+73.30;73;Pipe-lines;Pijplijnen
+73.40;73;Autres ouvrages;Overige werken
+73.90;73;Travaux d’infrastructure  réalisés en régie propre;Infrastructuurwerken uitgevoerd in eigen beheer
+74;7;Acquisitions d'autres biens d'investissement, y compris les biens incorporels;Verwerving van overige investeringsgoederen, waaronder immateriële goederen
+74.10;74;Achats de matériel de transport;Aankoop van vervoermaterieel
+74.21;74;Non utilisé;Niet gebruikt
+74.22;74;Acquisitions d'autre matériel;Verwerving van overig materieel
+74.30;74;Frais enregistrés lors de l'achat et de la vente de terrains et bâtiments;Overdrachtskosten bij aan- en verkoop van gronden en gebouwen
+74.40;74;Acquisitions de patentes, brevets et autres biens incorporels;Verwerving van patenten, octrooien en andere immateriële goederen
+74.50;74;Acquisitions d'objets de valeur;Verwerving van waardevolle voorwerpen
+74.60;74;Acquisitions d'actifs cultivés (végétaux et animaux);Verwerving van teeltgoederen (planten en dieren)
+74.70;74;Acquisitions de biens militaires durables;Verwerving van duurzame militaire goederen
+74.80;74;Acquisitions en matière de recherche et développement;Verwerving inzake onderzoek en ontwikkeling
+74.90;74;Investissements mobiliers réalisés en régie propre;Roerende investeringen uitgevoerd in eigen beheer
+75;7;Constitution de stocks;Voorraadtoename
+75.00;75;Constitution de stocks;
+76;7;Ventes de biens immobiliers dans le pays;Verkoop van onroerende goederen in het binnenland
+76.1;76;Ventes de terrains;Verkoop van gronden
+76.11;76;À l'intérieur du secteur des administrations publiques;Binnen de overheidssector
+76.12;76;À d'autres secteurs que le secteur des administrations publiques;Aan andere sectoren dan de overheidssector
+76.2;76;Ventes d'ouvrages existants en matière de travaux routiers et hydrauliques;Verkoop van bestaande wegen- en waterbouwkundige werken
+76.21;76;À l'intérieur du secteur des administrations publiques;Binnen de overheidssector 
+76.22;76;À d'autres secteurs que le secteur des administrations publiques;Aan andere sectoren dan de overheidssector
+76.3;76;Ventes de bâtiments existants;Verkoop van bestaande gebouwen
+76.31;76;À l'intérieur du secteur des administrations publiques;Binnen de overheidssector 
+76.32;76;À d'autres secteurs que le secteur des administrations publiques;Aan andere sectoren dan de overheidssector
+77;7;Ventes d'autres biens d'investissement, y compris les biens incorporels;Verkoop van overige investeringsgoederen, waaronder immateriële goederen 
+77.10;77;Ventes de matériel de transport;Verkoop van vervoermaterieel
+77.20;77;Ventes d'autre matériel;Verkoop van overig materieel
+77.30;77;Ventes de patentes, brevets et autres biens incorporels;Verkoop van patenten, octrooien en andere immateriële goederen
+77.40;77;Ventes d'objets de valeur;Verkoop van waardevolle voorwerpen
+77.50;77;Ventes d'actifs cultivés (végétaux et animaux);Verkoop van teeltgoederen (planten en dieren)
+77.60;77;Non utilisé;Niet gebruikt
+77.70;77;Ventes de biens militaires durables;Verkoop van duurzame militaire goederen
+77.80;77;Ventes en matière de recherche et développement;Verkoop inzake onderzoek en ontwikkeling
+78;7;Réduction des stocks;Voorraadverminderingen
+78.00;78;Réduction des stocks;Voorraadverminderingen
+8;;"OCTROIS ET REMBOURSEMENTS DE CRÉDITS;PARTICIPATIONS ET LIQUIDATIONS DE PARTICIPATIONS;AUTRES PRODUITS FINANCIERS ET AVANCES";"KREDIETVERLENINGEN EN KREDIETAFLOSSINGEN;DEELNEMINGEN EN VEREFFENINGEN VAN DEELNEMINGEN;ANDERE FINANCIËLE PRODUCTEN EN VOORSCHOTTEN"
+81;8;"Octrois de crédits aux et participations dans les entreprises et institutions financières;autres produits financiers et avances";Kredietverleningen aan en deelnemingen in bedrijven en financiële instellingen, andere financiële producten en voorschotten
+81.11;81;Octrois de crédits aux entreprises publiques;Kredietverleningen aan overheidsbedrijven
+81.12;81;Octrois de crédits aux entreprises privées;Kredietverleningen aan privébedrijven
+81.21;81;Octrois de crédits aux institutions publiques de crédit;Kredietverleningen aan openbare kredietinstellingen
+81.22;81;Octrois de crédits aux institutions privées de crédit;Kredietverleningen aan privékredietinstellingen
+81.31;81;Octrois de crédits aux sociétés publiques d'assurance;Kredietverleningen aan openbare verzekeringsmaatschappijen
+81.32;81;Octrois de crédits aux sociétés privées d'assurance;Kredietverleningen aan privéverzekeringsmaatschappijen
+81.41;81;Participations dans des entreprises publiques;Deelnemingen in overheidsbedrijven
+81.42;81;Participations dans des entreprises privées;Deelnemingen in privébedrijven
+81.51;81;Participations dans des institutions publiques de crédit;Deelnemingen in openbare kredietinstellingen
+81.52;81;Participations dans des institutions privées de crédit;Deelnemingen in privékredietinstellingen
+81.61;81;Participations dans des sociétés publiques d'assurance;Deelnemingen in openbare verzekeringsmaatschappijen
+81.62;81;Participations dans des sociétés privées d'assurance;Deelnemingen in privéverzekeringsmaatschappijen
+81.70;81;Autres produits financiers;Andere financiële producten 
+81.80;81;Avances aux entreprises et institutions financières;Voorschotten aan bedrijven en financiële instellingen
+82;8;Octrois de crédits et avances aux ASBL au service des ménages;Kredietverleningen en voorschotten aan vzw's ten behoeve van de gezinnen
+82.00;82;Octrois de crédits aux ASBL au service des ménages;Kredietverleningen aan vzw's ten behoeve van de gezinnen
+82.10;82;Avances aux ASBL au service des ménages;Voorschotten aan vzw's ten behoeve van de gezinnen
+83;8;Octrois de crédits et avances aux ménages;Kredietverleningen en voorschotten aan gezinnen
+83.00;83;Octrois de crédits aux ménages;Kredietverleningen aan gezinnen
+83.10;83;Avances aux ménages;Voorschotten aan gezinnen
+84;8;Octrois de crédits, participations et avances à l'étranger;Kredietverleningen aan, deelnemingen in en voorschotten aan het buitenland
+84.1;84;Octrois de crédits à l'étranger;Kredietverleningen aan het buitenland
+84.11;84;Aux institutions de l'UE;Aan EU-instellingen
+84.12;84;Aux pays membres de l'UE (administrations publiques);Aan lidstaten van de EU (overheden)
+84.13;84;Aux pays membres de l'UE (non-administrations publiques);Aan lidstaten van de EU (niet-overheden)
+84.14;84;Aux institutions internationales autres que les institutions de l'UE;Aan internationale instellingen andere dan de EU-instellingen
+84.15;84;Aux pays autres que les pays membres de l'UE (administrations publiques);Aan landen andere dan de lidstaten van de EU (overheden)
+84.16;84;Aux pays autres que les pays membres de l'UE (non-administrations publiques);Aan landen andere dan de lidstaten van de EU (niet-overheden)
+84.17;84;Préfinancement dans le cadre des subventions européennes;Prefinanciering in het kader van Europese subsidies
+84.2;84;Participations à l'étranger;Deelnemingen in het buitenland
+84.21;84;Dans des institutions de l'UE;In EU-instellingen
+84.22;84;Dans des pays membres de l'UE (non-administrations publiques);In lidstaten van de EU (niet-overheden)
+84.23;84;Dans des institutions internationales autres que les institutions de l'UE;In internationale instellingen andere dan de EU-instellingen
+84.24;84;Dans des pays autres que les pays membres de l'UE (non-administrations publiques);In landen andere dan de lidstaten van de EU (niet-overheden)
+84.3;84;Avances à l'étranger;Voorschotten aan het buitenland
+84.30;84;Avances à l'étranger;Voorschotten aan het buitenland
+85;8;"Octrois de crédits;prises de participations et avances à l'intérieur du secteur des administrations publiques";Kredietverleningen, deelnemingen en voorschotten binnen de overheidssector
+85.1;85;Octrois de crédits à l'intérieur d'un groupe institutionnel;Kredietverleningen binnen een institutionele groep
+85.11;85;Au pouvoir institutionnel;Aan de institutionele overheid
+85.12;85;Aux fonds budgétaires non organiques;Aan niet-organieke begrotingsfondsen
+85.13;85;Aux services administratifs à comptabilité autonome (SACA);Aan administratieve diensten met boekhoudkundige autonomie (ADBA)
+85.14;85;Aux organismes administratifs publics (OAP);Aan administratieve openbare instellingen (AOI)
+85.15;85;Aux établissements d'enseignement du pouvoir institutionnel;Aan onderwijsinstellingen van de institutionele overheid
+85.16;85;Aux ASBL des administrations publiques;Aan vzw's van de overheid
+85.17;85;Aux autres unités publiques;Aan andere eenheden van de overheid
+85.2;85;Octrois de crédits aux administrations de sécurité sociale;Kredietverleningen aan de socialezekerheidsinstellingen
+85.20;85;Octrois de crédits aux administrations de sécurité sociale;Kredietverleningen aan de socialezekerheidsinstellingen
+85.3;85;Octrois de crédits aux administrations publiques locales;Kredietverleningen aan lokale overheden
+85.31;85;Aux provinces;Aan provincies
+85.32;85;Aux communes;Aan gemeenten
+85.33;85;Non utilisé;Niet gebruikt
+85.34;85;Aux ASBL des pouvoirs locaux;Aan vzw's van de lokale overheden
+85.35;85;Aux autres administrations publiques locales;Aan overige lokale overheden
+85.4;85;Octrois de crédits à l'enseignement autonome subsidié;Kredietverleningen aan het gesubsidieerd autonoom onderwijs
+85.40;85;Octrois de crédits à l'enseignement autonome subsidié;Kredietverleningen aan het gesubsidieerd autonoom onderwijs
+85.5;85;Octrois de crédits à d'autres groupes institutionnels;Kredietverleningen aan andere institutionele groepen 
+85.50;85;Octrois de crédits à d'autres groupes institutionnels;Kredietverleningen aan andere institutionele groepen 
+85.6;85;Prises de participations à l'intérieur des administrations publiques;Deelnemingen binnen de overheidssector
+85.61;85;À l'intérieur du groupe institutionnel;Binnen de institutionele groep 
+85.62;85;Sécurité sociale;Sociale zekerheid
+85.63;85;Pouvoirs locaux;Lokale overheden
+85.64;85;Enseignement autonome subsidié;Gesubsidieerd autonoom onderwijs
+85.65;85;Autres groupes institutionnels;Andere institutionele groepen
+85.7;85;Avances à l'intérieur du secteur des administrations publiques;Voorschotten binnen de overheidssector
+85.71;85;À l'intérieur du groupe institutionnel;Binnen de institutionele groep 
+85.72;85;Sécurité sociale;Sociale zekerheid
+85.73;85;Pouvoirs locaux;Lokale overheden
+85.74;85;Enseignement autonome subsidié;Gesubsidieerd autonoom onderwijs
+85.75;85;Autres groupes institutionnels;Andere institutionele groepen
+86;8;"Remboursements de crédits par et liquidations de participations dans les entreprises et institutions financières;autres produits financiers et avances";Kredietaflossingen door, vereffeningen van deelnemingen in bedrijven en financiële instellingen, andere financiële producten en terugbetaling van voorschotten
+86.10;86;Remboursements de crédits par les entreprises;Kredietaflossingen door bedrijven
+86.20;86;Remboursements de crédits par les institutions de crédit;Kredietaflossingen door kredietinstellingen
+86.30;86;Remboursements de crédits par les sociétés d'assurance;Kredietaflossingen door verzekeringsmaatschappijen
+86.40;86;Liquidations de participations dans les entreprises;Vereffeningen van deelnemingen in bedrijven
+86.50;86;Liquidations de participations dans les institutions de crédit;Vereffeningen van deelnemingen in kredietinstellingen
+86.60;86;Liquidations de participations dans les sociétés d'assurance;Vereffeningen van deelnemingen in verzekeringsmaatschappijen
+86.70;86;Autres produits financiers;Andere financiële producten 
+86.80;86;Remboursements d'avances par les entreprises et institutions financières;Terugbetaling van voorschotten door bedrijven en financiële instellingen
+87;8;Remboursements de crédits et d'avances par les ASBL au service des ménages et par les ménages;Kredietaflossingen en terugbetaling van voorschotten door vzw's ten behoeve van de gezinnen en door gezinnen
+87.10;87;Remboursements de crédits par les ASBL au service des ménages;Kredietaflossingen door vzw's ten behoeve van de gezinnen
+87.20;87;Remboursements de crédits par les ménages;Kredietaflossingen door gezinnen
+87.30;87;Remboursements d'avances par les ASBL au service des ménages;Terugbetaling van voorschotten door vzw's ten behoeve van de gezinnen
+87.40;87;Remboursements d'avances par les ménages;Terugbetaling van voorschotten door de gezinnen
+88;8;Remboursements de crédits, d'avances  et liquidations de participations par l'étranger;Kredietaflossingen door, terugbetaling van voorschotten en vereffeningen van deelnemingen in het buitenland
+88.1;88;Remboursements de crédits par l'étranger;Kredietaflossingen door het buitenland
+88.11;88;Par les institutions de l'UE;Door EU-instellingen
+88.12;88;Par les pays membres de l'UE (administrations publiques);Door lidstaten van de EU (overheden)
+88.13;88;Par les pays membres de l'UE (non-administrations publiques);Door lidstaten van de EU (niet-overheden)
+88.14;88;Par des institutions internationales autres que les institutions de l'UE;Door internationale instellingen andere dan de EU-instellingen
+88.15;88;Par des pays autres que les pays membres de l'UE (administrations publiques);Door landen andere dan de lidstaten van de EU (overheden)
+88.16;88;Par des pays autres que les pays membres de l'UE (non-administrations publiques);Door landen andere dan de lidstaten van de EU (niet-overheden)
+88.17;88;Remboursement de l'UE dans le cadre de dépenses préfinancées par l'entité;Terugbetaling van de EU in het kader van uitgaven geprefinancierd door de entiteit
+88.2;88;Liquidations de participations à l'étranger;Vereffeningen van deelnemingen in het buitenland
+88.21;88;Dans des institutions de l'UE;In EU-instellingen
+88.22;88;Dans des pays membres de l'UE (non-administrations publiques);In lidstaten van de EU (niet-overheden)
+88.23;88;Dans des institutions internationales autres que les institutions de l'UE;In internationale instellingen andere dan de EU-instellingen
+88.24;88;Dans des pays autres que les pays membres de l'UE (non-administrations publiques);In landen andere dan de lidstaten van de EU (niet-overheden)
+88.3;88;Remboursements d'avances par l'étranger;Terugbetaling van voorschotten door het buitenland
+88.30;88;Remboursements d'avances par l'étranger;Terugbetaling van voorschotten door het buitenland
+89;8;Remboursements de crédits, d'avances et liquidations de participations à l'intérieur du secteur des administrations publiques;Kredietaflossingen, terugbetaling van voorschotten en vereffeningen van deelnemingen binnen de overheidssector
+89.1;89;Remboursements de crédits à l'intérieur d'un groupe institutionnel;Kredietaflossingen binnen een institutionele groep
+89.11;89;Du pouvoir institutionnel;Van de institutionele overheid
+89.12;89;Des fonds budgétaires non organiques;Van niet-organieke begrotingsfondsen
+89.13;89;Des services administratifs à comptabilité autonome (SACA);Van administratieve diensten met boekhoudkundige autonomie (ADBA)
+89.14;89;Des organismes administratifs publics (OAP);Van administratieve openbare instellingen (AOI)
+89.15;89;Des établissements d'enseignement du pouvoir institutionnel;Van onderwijsinstellingen van de institutionele overheid
+89.16;89;Des ASBL des administrations publiques;Van vzw's van de overheid
+89.17;89;Des autres unités publiques;Van andere eenheden van de overheid
+89.2;89;Remboursements de crédits par les administrations de sécurité sociale;Kredietaflossingen door de socialezekerheidsinstellingen
+89.20;89;Remboursements de crédits par les administrations de sécurité sociale;Kredietaflossingen door de socialezekerheidsinstellingen
+89.3;89;Remboursements de crédits par les administrations publiques locales;Kredietaflossingen door lokale overheden
+89.31;89;Par les provinces;Door provincies
+89.32;89;Par les communes;Door gemeenten
+89.33;89;Non utilisé;Niet gebruikt
+89.34;89;Par les ASBL des pouvoirs locaux;Door vzw's van de lokale overheden
+89.35;89;Par les autres administrations publiques locales;Door overige lokale overheden
+89.4;89;Remboursements de crédits par l'enseignement autonome subsidié;Kredietaflossingen door het gesubsidieerd autonoom onderwijs
+89.40;89;Remboursements de crédits par l'enseignement autonome subsidié;Kredietaflossingen door het gesubsidieerd autonoom onderwijs
+89.5;89;Remboursements de crédits par d'autres groupes institutionnels;Kredietaflossingen door andere institutionele groepen
+89.50;89;Remboursements de crédits par d'autres groupes institutionnels;Kredietaflossingen door andere institutionele groepen 
+89.6;89;Liquidations de participations à l'intérieur du secteur des administrations publiques;Vereffeningen van deelnemingen binnen de overheidssector
+89.61;89;À l'intérieur du groupe institutionnel;Binnen de institutionele groep 
+89.62;89;Sécurité sociale;Sociale zekerheid
+89.63;89;Pouvoirs locaux;Lokale overheden
+89.64;89;Enseignement autonome subsidié;Gesubsidieerd autonoom onderwijs
+89.65;89;Autres groupes institutionnels;Andere institutionele groepen
+89.7;89;Remboursements d'avances à l'intérieur du secteur des administrations publiques;Terugbetaling van voorschotten binnen de overheidssector
+89.71;89;À l'intérieur du groupe institutionnel;Binnen de institutionele groep 
+89.72;89;Sécurité sociale;Sociale zekerheid
+89.73;89;Pouvoirs locaux;Lokale overheden
+89.74;89;Enseignement autonome subsidié;Gesubsidieerd autonoom onderwijs
+89.75;89;Autres groupes institutionnels;Andere institutionele groepen
+9;;DETTE PUBLIQUE;OVERHEIDSSCHULD
+91;9;Remboursements d'emprunts émis à plus d'un an;Aflossingen van leningen met een looptijd van meer dan één jaar
+91.10;91;Remboursements de la dette en euros;Aflossingen van de schuld in euro
+91.20;91;Remboursements de la dette en monnaies étrangères;Aflossingen van de schuld in vreemde valuta
+91.3;91;Remboursements de la dette à l'intérieur du secteur des administrations publiques;Aflossingen van de schuld binnen de overheidssector
+91.30;91;Remboursements de la dette à l'intérieur du secteur des administrations publiques (non ventilé);Aflossingen van de schuld binnen de overheidssector (niet verdeeld)
+91.31;91;A l'intérieur du groupe institutionnel;Binnen de institutionele groep 
+91.32;91;A la sécurité sociale;Aan de sociale zekerheid
+91.33;91;Aux pouvoirs locaux;Aan de lokale overheden
+91.34;91;A l'enseignement autonome subsidié;Aan het gesubsidieerd autonoom onderwijs
+91.35;91;Aux autres groupes institutionnels;Aan andere institutionele groepen
+91.4;91;Remboursements des préfinancements de l'UE;Terugbetaling van prefinancieringen van de EU
+91.40;91;Remboursements des préfinancements de l'UE;Terugbetaling van prefinancieringen van de EU
+91.7;91;Amortissements sur leasings financiers;Aflossingen bij financiële leasings
+91.70;91;Amortissements sur leasings financiers;Aflossingen bij financiële leasings
+92;9;Démonétisations;Ontmuntingen(thans niet in gebruik)
+92.00;92;Démonétisations;Ontmuntingen(thans niet in gebruik)
+93;9;Réduction de fonds propres;Verlaging van het eigen vermogen
+93.00;93;Réduction de fonds propres;Verlaging van het eigen vermogen
+94;9;Remboursements d'avances;Terugbetaling van voorschotten
+94.00;94;Remboursements d'avances;Terugbetaling van voorschotten
+96;9;Produits des emprunts émis à plus d'un an;Opbrengst van leningen met een looptijd van meer dan één jaar
+96.10;96;Produits des emprunts en euros;Opbrengst van leningen in euro
+96.20;96;Produits des emprunts en monnaies étrangères;Opbrengst van leningen in vreemde valuta
+96.3;96;Produits des emprunts à l'intérieur du secteur des administrations publiques;Opbrengst van leningen binnen de overheidssector
+96.30;96;Produits des emprunts à l'intérieur du secteur des administrations publiques (non ventilé);Opbrengst van leningen binnen de overheidssector (niet verdeeld)
+96.31;96;A l'intérieur du groupe institutionnel;Binnen de institutionele groep 
+96.32;96;De la sécurité sociale;Van de sociale zekerheid
+96.33;96;Des pouvoirs locaux;Van de lokale overheden
+96.34;96;De l'enseignement autonome subsidié;Van het gesubsidieerd autonoom onderwijs
+96.35;96;Des autres groupes institutionnels;Van andere institutionele groepen
+96.4;96;Préfinancement par l'UE des dépenses financées par l'UE;Prefinanciering door de EU van door Europese subsidies gefinancierde uitgaven 
+96.40;96;Préfinancement par l'UE des dépenses financées par l'UE;Prefinanciering door de EU van door Europese subsidies gefinancierde uitgaven 
+96.7;96;Produits des emprunts en matière de leasings financiers;Opbrengst van leningen inzake financiële leasings
+96.70;96;Produits des emprunts en matière de leasings financiers;Opbrengst van leningen inzake financiële leasings
+97;9;Monétisations;Aanmuntingen(thans niet in gebruik)
+97.00;97;Monétisations;Aanmuntingen(thans niet in gebruik)
+98;9;Apport de fonds propres;Verhoging van het eigen vermogen
+98.00;98;Apport de fonds propres;Verhoging van het eigen vermogen
+99;9;Produit des avances;Opbrengst van voorschotten
+99.00;99;Produit des avances;Opbrengst van voorschotten

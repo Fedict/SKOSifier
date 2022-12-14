@@ -136,8 +136,8 @@ public class Main {
 		
 		RDFWriter w = Rio.createWriter(fmt, out);
 		w.set(BasicWriterSettings.PRETTY_PRINT, true);
-		w.handleNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
 		w.startRDF();
+		w.handleNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
 		m.forEach(w::handleStatement);
 		w.endRDF();
 	}

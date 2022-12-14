@@ -1,0 +1,9 @@
+id;parent;en
+NOTSTARTED;;"Not started"
+STARTED;;"Started"
+WAIT;;"Waiting"
+WAITAPPROV;WAIT;"Waiting approval"
+WAITTRANSL;WAIT;"Waiting translation"
+WAITCORR;WAIT;"Waiting correction"
+EXITED;;"Stopped without completion"
+COMPLETED;;"Completed"

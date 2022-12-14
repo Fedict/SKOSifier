@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2016, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,30 +26,28 @@
 
 package be.fedict.lodtools.skosifier;
 
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.exceptions.CsvException;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
-
 import java.nio.charset.StandardCharsets;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.lang3.CharEncoding;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
@@ -67,9 +65,16 @@ import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.helpers.BasicWriterSettings;
 
 /**
- * Converts a CSV to a SKOS file and various RDF files
+ * Converts a CSV file with a specific format to an RDF / SKOS file
  * 
- * @author Bart.Hanssens
+ * The first line must contain the following column headers:
+ * - "ID": unique ID
+ * - "parent": parent ID (optional)
+ * - language tag (e.g. "nl", "fr", "de", "en" .... one language per column)
+ * - start date
+ * - end date
+ * 
+ * @author Bart Hanssens
  */
 public class Main {	
 	private static List<String[]> rows;
@@ -83,16 +88,16 @@ public class Main {
 	private static final String START = "https://schema.org/startDate";
 	private static final String END = "https://schema.org/endDate";
 	
-	private static final List LANGS = 
-			Arrays.asList(new String[]{ "nl", "fr", "de", "en" });
-	private static final List ALT_LANGS = 
-			Arrays.asList(new String[]{ "alt_nl", "alt_fr", "alt_de", "alt_en" });
-	private static final List DEF_LANGS = 
-			Arrays.asList(new String[]{ "def_nl", "def_fr", "def_de", "def_en" });
-	private static final List SCOPE_LANGS = 
-			Arrays.asList(new String[]{ "scope_nl", "scope_fr", "scope_de", "scope_en" });
+	private static final List<String> LANGS = 
+			List.of("nl", "fr", "de", "en");
+	private static final List<String> ALT_LANGS = 
+			List.of("alt_nl", "alt_fr", "alt_de", "alt_en");
+	private static final List<String> DEF_LANGS = 
+			List.of("def_nl", "def_fr", "def_de", "def_en");
+	private static final List<String> SCOPE_LANGS = 
+			List.of("scope_nl", "scope_fr", "scope_de", "scope_en");
 		
-	private static final Map<String, IRI> PROPS = new HashMap();
+	private static final Map<String, IRI> PROPS = new HashMap<>();
 	static {
 		PROPS.put(OWL.SAMEAS.getLocalName().toLowerCase(), OWL.SAMEAS);
 		PROPS.put(SKOS.EXACT_MATCH.getLocalName().toLowerCase(), SKOS.EXACT_MATCH);
@@ -104,21 +109,16 @@ public class Main {
 	/**
 	 * Read CSV input file (using ; as separator).
 	 * 
-	 * The first line must contain the following column headers:
-	 * - "ID": unique ID
-	 * - "parent": parent ID (optional)
-	 * - language tag (e.g. "nl", "fr", "de", "en" .... one language per column)
-	 * - start date
-	 * - end date
-	 * 
 	 * @param f CSV file
-	 * @throws FileNotFoundException
-	 * @throws IOException 
+	 * @throws IOException
+	 * @throws CsvException
 	 */
-	private static void readCSV(File f) throws FileNotFoundException, IOException {
-		Reader reader = new InputStreamReader(new FileInputStream(f), CharEncoding.UTF_8);
-		try (CSVReader r = new CSVReader(reader, ';')) {
-			rows = r.readAll();
+	private static void readCSV(File f) throws IOException, CsvException {
+		CSVParser parser = new CSVParserBuilder().withSeparator(';').withIgnoreQuotations(true).build();
+		
+		try(Reader r = new InputStreamReader(new FileInputStream(f), StandardCharsets.UTF_8);
+			CSVReader csv = new CSVReaderBuilder(r).withSkipLines(0).withCSVParser(parser).build()) {
+			rows = csv.readAll();
 			header = rows.remove(0);
 		}
 	}
@@ -141,16 +141,6 @@ public class Main {
 		m.forEach(w::handleStatement);
 		w.endRDF();
 	}
-
-	/**
-	 * Create and ID from a string
-	 * 
-	 * @param s string
-	 * @return identifier
-	 */
-	private static String toId(String s) {
-		return s + "#id";
-	}
 	
 	/**
 	 * Write SKOS files to a directory.
@@ -160,27 +150,26 @@ public class Main {
 	 * @param ext file extension
 	 * @throws IOException
 	 */
-	private static void writeSkos(File dir, RDFFormat fmt, String ext) 
-			throws IOException {
+	private static void writeSkos(File dir, RDFFormat fmt, String ext) throws IOException {
 		Model M = new LinkedHashModel();
 
 		String vocab = baseURI.endsWith("/") 
 				? baseURI.substring(0, baseURI.length()-1)
 				: baseURI;	
 		
-		IRI scheme = F.createIRI(toId(vocab));
+		IRI scheme = F.createIRI(vocab);
 		M.add(scheme, RDF.TYPE, SKOS.CONCEPT_SCHEME);
 		
 		for(String[] row: rows) {
-			String id = row[0].replaceAll("\\.", "_");
-			IRI node = F.createIRI(baseURI, toId(id));
+			String id = row[0].replace(".", "_");
+			IRI node = F.createIRI(baseURI, id);
 		
 			// parent or not
 			if (row[1].isEmpty()) {
 				M.add(node, SKOS.TOP_CONCEPT_OF, scheme);
 				M.add(scheme, SKOS.HAS_TOP_CONCEPT, node);
 			} else { 
-				IRI parent = F.createIRI(baseURI, toId(row[1]));
+				IRI parent = F.createIRI(baseURI, row[1]);
 				M.add(node, SKOS.BROADER, parent);
 				M.add(parent, SKOS.NARROWER, node);
 			}
@@ -212,7 +201,7 @@ public class Main {
 					M.add(node, SKOS.DEFINITION, label);
 					continue;
 				}
-                                // scope notes in different languages
+				// scope notes in different languages
 				if (SCOPE_LANGS.contains(header[i])) {
 					Literal label = F.createLiteral(row[i], header[i].replace("scope_", ""));
 					M.add(node, SKOS.SCOPE_NOTE, label);
@@ -245,8 +234,8 @@ public class Main {
 					if (header[i].startsWith(prop)) {
 						IRI ref = F.createIRI(row[i]);
 						M.add(node, PROPS.get(prop), ref);
+						break;
 					}
-					break;
 				}
 				
 				if (header[i].startsWith("http")) {
@@ -268,9 +257,8 @@ public class Main {
 	public static void writeSkos(File dir) throws IOException {
 		writeSkos(dir, RDFFormat.NTRIPLES, "nt");
 		writeSkos(dir, RDFFormat.TURTLE, "ttl");
-		//writeSkos(dir, RDFFormat.JSONLD, "json");
 	}
-	
+
 	/**
 	 * Main
 	 * 
@@ -287,7 +275,7 @@ public class Main {
 		File f = new File(args[0]);
 		try {
 			readCSV(f);
-		} catch (IOException ex) {
+		} catch (IOException|CsvException ex) {
 			System.err.println("Failed to read input file " + ex.getMessage());
 			System.exit(-2);
 		}
@@ -299,7 +287,6 @@ public class Main {
 		
 		try {
 			writeSkos(dir);
-		//	writeHTML(dir);
 		} catch (IOException ex) {
 			System.err.println("Failed to write output");
 			System.exit(-3);
